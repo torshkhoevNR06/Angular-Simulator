@@ -38,7 +38,7 @@ const getStr = (str:string, symbol?: string):string => {
   if (symbol) {
     return `${str}, ${symbol}`;
   } else {
-    return `Hello ...`;
+    return `${str} ...`;
   }
 }
 
