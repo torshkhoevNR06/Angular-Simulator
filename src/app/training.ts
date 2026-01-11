@@ -31,12 +31,12 @@ const getFormatText = (str: string, format: string): string => {
 textFormat = "lowercase";
 console.log(getFormatText(textFormat, "lowercase"));
 
-// №08 Функция которая может принять 2-ое значение по желанию
-const getStr = (str: string, removeSymbol: string): string => {
-  return str.replaceAll(removeSymbol, "");
+// №08 Функция которая получает измененную строку
+const getStrWithoutCharacter = (str: string, symbol: string): string => {
+  return str.replaceAll(symbol, "");
 };
 
-console.log(getStr("Hello, World!", "!"));
+console.log(getStrWithoutCharacter("Hello, World!", "!"));
 
 // №05-06 Типизация объектов пользователей и админа
 interface IUser {
@@ -88,7 +88,7 @@ const admin: IAdmin = {
   browser: "Zen"
 };
 
-// №09 Массив объектов пользователей отфильтрованных по имени
+// №09 Массив объектов пользователей отфильтрованных по параметру
 const users: IUser[] = [
   {
     name: "Alice",
