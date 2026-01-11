@@ -3,7 +3,7 @@ let status1: "loading" | "success" | "error";
 status1 = "error";
 
 let textFormat: "uppercase" | "lowercase" | "capitalize";
-textFormat = "lowercase";
+textFormat = "capitalize";
 
 console.group("Информация о статусе и формат текста:");
 console.log(`Статус: ${status1}`);
@@ -11,39 +11,32 @@ console.log(`Текст формата: ${textFormat}`);
 console.groupEnd();
 
 // №01 Типизированная функция которая возвращает сумму 2 чисел
-const getSumNumbers = (firstNumber:number, secondNumber:number):number => {
+const getSumNumbers = (firstNumber: number, secondNumber: number): number => {
   return firstNumber + secondNumber;
-}
+};
 
 console.log("Сумма 2 чисел:", getSumNumbers(3, 6));
 
 // №07 Функция с конкретным форматированием
-const getFormatText = (str: string, format:string):void => {
+const getFormatText = (str: string, format: string): string => {
   if(format === "uppercase") {
-    str = format;
-    console.log(str.toUpperCase());
+    return str.toUpperCase();
   } else if (format === "lowercase") {
-    str = format;
-    console.log(str.toLowerCase());
+    return str.toLowerCase();
   } else {
-    str = format;
-    console.log(`${str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()}`);
+    return `${str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()}`;
   }
-}
+};
 
-getFormatText(textFormat, "capitalize");
+textFormat = "lowercase";
+console.log(getFormatText(textFormat, "lowercase"));
 
 // №08 Функция которая может принять 2-ое значение по желанию
-const getStr = (str:string, symbol?: string):string => {
-  if (symbol) {
-    return `${str}, ${symbol}`;
-  } else {
-    return `${str} ...`;
-  }
-}
+const getStr = (str: string, removeSymbol: string): string => {
+  return str.replaceAll(removeSymbol, "");
+};
 
-console.log(getStr("Hello", "World!"));
-console.log(getStr("Hello"));
+console.log(getStr("Hello, World!", "!"));
 
 // №05-06 Типизация объектов пользователей и админа
 interface IUser {
@@ -98,7 +91,7 @@ const admin: IAdmin = {
 // №09 Массив объектов пользователей отфильтрованных по имени
 const users: IUser[] = [
   {
-    name: 'Alice',
+    name: "Alice",
     age: 28,
     width: 65,
     height: 178,
@@ -107,7 +100,7 @@ const users: IUser[] = [
     gender: "Женский"
   },
   {
-    name: 'Bob',
+    name: "Bob",
     age: 22,
     width: 84,
     height: 165,
@@ -116,31 +109,28 @@ const users: IUser[] = [
     gender: "Мужской"
   },
   {
-    name: 'Charlie',
+    name: "Charlie",
     age: 30,
     width: 82,
     height: 186,
     city: "Нарва",
-    job: "Инженер",
-    gender: "Мужской"
+    job: "Инженер"
   },
   {
-    name: 'David',
+    name: "David",
     age: 25,
     width: 81,
     height: 187,
     city: "Пярну",
-    job: "Программист",
-    gender: "Мужской"
+    job: "Программист"
   },
-];
+]
 
-console.group("Информацию о админе и пользователях:");
+const usersWithFullInfo = users.filter(users => users.gender);
+
+console.group("Информация о админе и пользователях:");
 console.log("Администратор:", admin);
 console.log("Первый пользователь:", firstUser);
 console.log("Второй пользователь:", secondUser);
+console.log("Отфильтрованный массив пользователей:", usersWithFullInfo);
 console.groupEnd();
-
-users.filter(users => {
-  console.log(`Имя пользователя: ${users.name}`);
-});
