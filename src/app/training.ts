@@ -6,8 +6,8 @@ let textFormat: "uppercase" | "lowercase" | "capitalize";
 textFormat = "capitalize";
 
 console.group("Информация о статусе и формат текста:");
-console.log(`Статус: ${status1}`);
-console.log(`Текст формата: ${textFormat}`);
+console.log(`Статус: ${ status1 }`);
+console.log(`Текст формата: ${ textFormat }`);
 console.groupEnd();
 
 // №01 Типизированная функция которая возвращает сумму 2 чисел
