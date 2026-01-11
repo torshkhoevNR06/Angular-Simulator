@@ -32,11 +32,11 @@ textFormat = "lowercase";
 console.log(getFormatText(textFormat, "lowercase"));
 
 // №08 Функция которая получает измененную строку
-const getStrWithoutCharacter = (str: string, symbol: string): string => {
+const removeSymbol = (str: string, symbol: string): string => {
   return str.replaceAll(symbol, "");
 };
 
-console.log(getStrWithoutCharacter("Hello, World!", "!"));
+console.log(removeSymbol("Hello, World!", "!"));
 
 // №05-06 Типизация объектов пользователей и админа
 interface IUser {
