@@ -1,0 +1,51 @@
+.change-detection-panel {
+  background: rgba(6, 10, 12, 0.82);
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 8px;
+}
+
+.change-detection-panel .status .count {
+  font-weight: 600;
+}
+
+.change-detection-panel .status .value {
+  display: inline-block;
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 8px;
+  border-radius: 6px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.change-detection-panel .controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.change-detection-panel .btn {
+  background: #7c5cff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background .15s ease, transform .08s ease;
+}
+
+.change-detection-panel .btn:hover {
+  background: #5b3cff;
+  transform: translateY(-1px);
+}

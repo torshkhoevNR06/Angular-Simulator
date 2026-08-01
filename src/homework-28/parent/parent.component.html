@@ -1,0 +1,17 @@
+<div class="hw-panel parent-panel">
+	<div class="controls">
+		<button class="btn" (click)="changeName()">Изменить имя</button>
+	</div>
+
+	<div class="child-wrap">
+		<app-child [userChange]="user" />
+	</div>
+
+	<div class="change-detection-wrap">
+		<app-change-detection-one />
+	</div>
+
+	<div class="change-detection-wrap">
+		<app-change-detection-two />
+	</div>
+</div>

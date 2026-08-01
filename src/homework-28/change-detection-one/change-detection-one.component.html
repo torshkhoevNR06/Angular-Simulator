@@ -1,0 +1,14 @@
+<div class="hw-panel change-detection-panel">
+  <div class="status">
+    <div class="count">Счётчик: <span class="value">{{ count }}</span></div>
+  </div>
+
+  <div class="controls">
+    <button class="btn" (click)="eventClick()">Изменить 1</button>
+    <button class="btn" (click)="setTimeout()">Изменить 2</button>
+    <button class="btn" (click)="promise()">Изменить 3</button>
+    <button class="btn" (click)="HTTP()">Изменить 4</button>
+    <button class="btn" (click)="setInterval()">Изменить 5</button>
+    <button class="btn" (click)="multiEvent()">Изменить 6</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.child-panel {
+  background: rgba(4, 7, 8, 0.72);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #e6f7f0;
+  margin: 6px 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 6px;
+}
+
+.user-card {
+  display: block;
+}
+
+.user-json {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 6px;
+  white-space: pre-wrap;
+  font-size: 13px;
+  color: #cfeee0;
+  overflow: auto;
+}
