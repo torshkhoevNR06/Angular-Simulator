@@ -16,6 +16,11 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('../home-page/home-page.component').then(c => c.HomePageComponent)
       },
+      {
+        path: 'cd', 
+        canActivate: [adminGuard],
+        loadComponent: () => import('../homework-28/parent/parent.component').then(c => c.ParentComponent)
+      },
       { 
         path: 'users', 
         canActivate: [adminGuard],

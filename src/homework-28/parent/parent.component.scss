@@ -1,0 +1,42 @@
+.hw-panel {
+  background: rgba(9, 12, 14, 0.95);
+  padding: 14px 14px 12px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  color: #dff7ee;
+  max-width: 980px;
+  margin: 24px auto 120px;
+  width: calc(100% - 32px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-sizing: border-box;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 12px;
+}
+
+.parent-panel .controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.parent-panel .btn {
+  background: #7c5cff;
+  /* accent purple */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background .15s ease, transform .08s ease;
+}
+
+.parent-panel .btn:hover {
+  background: #5b3cff;
+  transform: translateY(-1px);
+}
+
+.child-wrap,
+.change-detection-wrap {
+  margin-top: 12px;
+}
