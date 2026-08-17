@@ -1,8 +1,8 @@
 export interface IDirection {
   id: number;
   image: string;
-  title: string;
-  description: string;
+  keyOne: string;
+  keyTwo: string;
   rating: string;
   price: number;
 }

@@ -11,34 +11,34 @@ import { APP_CONFIG } from '../app-config.token';
 import { IAppConfig } from '../interface/IAppConfig';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ThemeService {
-  private localStorageService: LocalStorageService =
-    inject(LocalStorageService);
+  
+  private localStorageService: LocalStorageService = inject(LocalStorageService);
 
   APP_CONFIG: IAppConfig = inject(APP_CONFIG);
 
-  private isDarkModeSubject: BehaviorSubject<boolean> =
-    new BehaviorSubject<boolean>(this.initDarkMode());
+  private isDarkModeSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.initDarkMode());
   isDarkMode$: Observable<boolean> = this.isDarkModeSubject.asObservable().pipe(
     tap((isDarkMode: boolean) => {
       const element: HTMLHtmlElement = document.querySelector('html')!;
       return isDarkMode
         ? element.classList.add('p-dark')
         : element.classList.remove('p-dark');
-    }),
+    })
   );
 
   private themeSubject: BehaviorSubject<Theme> = new BehaviorSubject<Theme>(
-    this.initTheme(),
+    this.initTheme()
   );
+
   theme$: Observable<Theme> = this.themeSubject.asObservable();
 
   themes: ITheme[] = [
-    { name: 'Nora', value: Theme.NORA, preset: Nora },
-    { name: 'Aura', value: Theme.AURA, preset: Aura },
-    { name: 'Lara', value: Theme.LARA, preset: Lara },
+    { key: 'header.themes.nora', value: Theme.NORA, preset: Nora },
+    { key: 'header.themes.aura', value: Theme.AURA, preset: Aura },
+    { key: 'header.themes.lara', value: Theme.LARA, preset: Lara }
   ];
 
   private initDarkMode(): boolean {
@@ -64,11 +64,12 @@ export class ThemeService {
 
   setTheme(theme: Theme): void {
     const getRelevantTheme: ITheme = this.themes.find(
-      (topic: ITheme) => topic.value === theme,
+      (topic: ITheme) => topic.value === theme
     )!;
 
     this.themeSubject.next(theme);
     usePreset(getRelevantTheme.preset);
     this.localStorageService.setItem('theme', theme);
   }
+
 }

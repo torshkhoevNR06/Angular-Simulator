@@ -2,13 +2,13 @@
   <section class="tour-program">
     <div class="tour-program__wrapper">
       <div class="tour-program__title">
-        <h1 class="heading">Насладись прогулкой в горах с&nbsp;командой единомышленников</h1>
+        <h1 class="heading">{{ 'main.heading' | translate }}</h1>
       </div>
       <div class="bottom-container">
         <div class="location-tour">
           <div class="location-tour__container">
             @if (!selectedLocation) {
-              <span class="location-tour__before-choice">Локация для тура</span>
+              <span class="location-tour__before-choice">{{ 'main.locationTour' | translate }}</span>
             } @else {
               <span class="location-tour__before-choice">{{ selectedLocation }}</span>
             }
@@ -19,18 +19,18 @@
                 <option selected disabled hidden>{{ selectedLocation }}</option>
               }
               @for (location of locations; track location.id) {
-                <option [value]="location.name">{{ location.name }}</option>
+                <option [value]="location.key | translate">{{ location.key | translate }}</option>
               } @empty {
-                <span>Не удалось отобразить список локаций!</span>
+                <span>{{ 'main.blockLocations' | translate }}</span>
               }
             </select>
           </div>
-          <span class="location-tour__desc">выберите из списка</span>
+          <span class="location-tour__desc">{{ 'main.selectionList' | translate }}</span>
         </div>
         <div class="date-hike">
           <div class="date-hike__container">
             @if (!selectedDate) {
-              <span>дд.мм.гггг</span>
+              <span>{{ 'main.date' | translate }}</span>
             } @else {
               <span>{{ selectedDate | date: DATE_PIPE_DEFAULT_OPTIONS.dateFormat }}</span>
             }
@@ -42,25 +42,25 @@
               [(ngModel)]="selectedDate"
             >
           </div>
-          <span class="date-hike__desc">укажите диапазон</span>
+          <span class="date-hike__desc">{{ 'main.specifyRange' | translate }}</span>
         </div>
         <div class="participants">
           <div class="participants__container">
             @if (!selectedParticipants) {
-              <span class="participants__before-choice">Участники</span>
+              <span class="participants__before-choice">{{ 'main.members' | translate }}</span>
             } @else {
               <span class="participants__before-choice">{{ selectedParticipants }}</span>
             }
             <fa-icon [icon]="faAngleDown" />
             <select class="number-participants" [(ngModel)]="selectedParticipants">
               @for (participant of participants; track participant.id) {
-                <option [value]="participant.name">{{ participant.name }}</option>
+                <option [value]="participant.key | translate">{{ participant.key | translate }}</option>
               } @empty {
-                <span>Не удалось отобразить список участников!</span>
+                <span>{{ 'main.blockMembers' | translate }}</span>
               }
             </select>
           </div>
-          <span class="participants__desc">выберите из списка</span>
+          <span class="participants__desc">{{ 'main.selectionList' | translate }}</span>
         </div>
         <div class="find-program" [class.find-program__disabled]="!isFormValid()">
           <button 
@@ -70,7 +70,7 @@
             [disabled]="!isFormValid()" 
             (click)="messageService.showInfo('Message Content')"
           >
-            Найти программу
+            {{ 'main.findProgram' | translate }}
           </button>
         </div>
       </div>
@@ -108,18 +108,15 @@
         </div>
       </div>
       <div class="our-approach__content">
-        <span class="entry our-approach__entry">о нашем походе</span>
-        <h2 class="title our-approach__title">Исследуйте все горные массивы мира вместе с нами</h2>
-        <p class="our-approach__desc">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более
-          двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял
-          одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской
-          литературе.</p>
+        <span class="entry our-approach__entry">{{ 'main.ourApproachEntry' | translate }}</span>
+        <h2 class="title our-approach__title">{{ 'main.ourApproachTitle' | translate }}</h2>
+        <p class="our-approach__desc">{{ 'main.ourApproachDesc' | translate }}</p>
         <button 
           class="btn our-approach__btn" 
           id="our-approach-btn"
           (click)="messageService.showWarn('Message Content')"
         >
-          Программа тура
+          {{ 'main.tourProgram' | translate }}
         </button>
       </div>
     </div>
@@ -128,10 +125,9 @@
   <section class="our-offer">
     <div class="container">
       <div class="our-offer__content">
-        <span class="entry our-offer__entry">наше предложение</span>
-        <h2 class="title our-offer__title">Лучшие программы для тебя</h2>
-        <p class="our-offer__desc">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
-          тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
+        <span class="entry our-offer__entry">{{ 'main.ourOfferEntry' | translate }}</span>
+        <h2 class="title our-offer__title">{{ 'main.ourOfferTitle' | translate }}</h2>
+        <p class="our-offer__desc">{{ 'main.ourOfferDesc' | translate }}</p>
         @for (card of cards; track card.id) {
           <div class="our-offer__item" id="our-offer-item">
             <div 
@@ -143,14 +139,14 @@
               <fa-icon [icon]="card.iconName" />
             </div>
             <div class="item__content">
-              <h3 class="item__title">{{ card.title }}</h3>
-              <p class="item__desc">{{ card.description }}</p>
+              <h3 class="item__title">{{ card.keyOne | translate }}</h3>
+              <p class="item__desc">{{ card.keyTwo | translate }}</p>
             </div>
           </div>
         } @empty {
-          <p>Пусто, карточки не отобразились!</p>
+          <p>{{ 'main.cardPlugging' | translate }}</p>
         }
-        <button class="btn our-offer__btn" id="our-offer-btn">Стоимость программ</button>
+        <button class="btn our-offer__btn" id="our-offer-btn">{{ 'main.costPrograms' | translate }}</button>
       </div>
 
       <div class="our-offer__images">
@@ -165,8 +161,8 @@
   <section class="popular-destinations">
     <div class="container popular-destinations__container">
       <div class="popular-destinations__info">
-        <span class="entry">по версии отдыхающих</span>
-        <h3 class="title">Популярные направления</h3>
+        <span class="entry">{{ 'main.feedback' | translate }}</span>
+        <h3 class="title">{{ 'main.popularDestinations' | translate }}</h3>
       </div>
       <div class="popular-destinations__images" id="popular-destinations-images">
         @for (direction of directions; track direction.id) {
@@ -178,8 +174,8 @@
             </div>
             <div class="box-description">
               <div class="box-description__location">
-                <h3 class="location__title">{{ direction.title }}</h3>
-                <span class="location__desc">{{ direction.description }}</span>
+                <h3 class="location__title">{{ direction.keyOne | translate }}</h3>
+                <span class="location__desc">{{ direction.keyTwo | translate }}</span>
               </div>
               <div class="box-description__price" id="box-description-price">
                 <span class="price-item">{{ direction.price }} &dollar;</span>
@@ -190,15 +186,15 @@
       </div>
     </div>
     <div class="popular-destinations__referral-rating">
-      <button class="btn referral-rating__btn" id="referral-rating-btn">Рейтинг направлений</button>
+      <button class="btn referral-rating__btn" id="referral-rating-btn">{{ 'main.referralRating' | translate }}</button>
     </div>
   </section>
 
   <section class="travel-blog">
     <div class="container travel-blog__container">
       <div class="travel-blog__info">
-        <span class="entry">делимся впечатлениями</span>
-        <h3 class="title">Блог о путешествиях</h3>
+        <span class="entry">{{ 'main.shareImpressionsOne' | translate }}</span>
+        <h3 class="title">{{ 'main.travelBlog' | translate }}</h3>
       </div>
       <div class="travel-blog__article">
         @for (article of articles; track article.id) {
@@ -208,12 +204,12 @@
             </div>
             <div class="article-holder__content">
               <div class="article-holder__content-item">
-                <h3 class="article-holder__content-title" id="article-holder-content-title">{{ article.title }}</h3>
-                <p class="article-holder__content-desc">{{ article.description }}</p>
+                <h3 class="article-holder__content-title" id="article-holder-content-title">{{ article.keyOne | translate }}</h3>
+                <p class="article-holder__content-desc">{{ article.keyTwo | translate }}</p>
               </div>
               <div class="article-holder__info">
                 <span class="info-date">{{ article.date | date: DATE_PIPE_DEFAULT_OPTIONS.dateFormat }}</span>
-                <a href="#" class="info-article" id="info-article">читать статью</a>
+                <a href="#" class="info-article" id="info-article">{{ 'main.infoArticle' | translate }}</a>
               </div>
             </div>
           </div>
@@ -225,7 +221,7 @@
           id="other-material__btn"
           (click)="messageService.showError('Message Content')"
         >
-          Другие материалы
+          {{ 'main.otherMaterial' | translate }}
         </button>
       </div>
     </div>
@@ -233,19 +229,55 @@
   <section class="share-impressions">
     <div class="container share-impressions__container">
       <div class="share-impressions__info">
-        <span class="entry">фото-отчет</span>
-        <h3 class="title">Делимся впечатлениями</h3>
+        <span class="entry">{{ 'main.photoReport' | translate }}</span>
+        <h3 class="title">{{ 'main.shareImpressionsTwo' | translate }}</h3>
       </div>
       <div class="share-impressions__halileria">
-        <img class="share-impressions__img" src="/images/cappadocia-at-dawn.png"alt="снимком вида 1"  width="580px" height="250px">
-        <img class="share-impressions__img" src="/images/travelers-gear.png" alt="снимком вида 2" width="280px" height="250px">
-        <img class="share-impressions__img" src="/images/burj-al-arab.png"alt="снимком вида 3" width="280px" height="250px">
-        <img class="share-impressions__img" src="/images/tropical-species.png" alt="снимком вида 4" width="280px" height="250px">
-        <img class="share-impressions__img" src="/images/grand-canyon.png" alt="снимком вида 5" width="580px" height="250px">
-        <img class="share-impressions__img" src="/images/traveler-note.png" alt="снимком вида 6" width="280px" height="250px">
+        <img 
+          class="share-impressions__img" 
+          src="/images/cappadocia-at-dawn.png"
+          alt="снимком вида 1" 
+          width="580px" 
+          height="250px"
+          >
+        <img 
+          class="share-impressions__img" 
+          src="/images/travelers-gear.png" 
+          alt="снимком вида 2" 
+          width="280px" 
+          height="250px"
+        >
+        <img 
+          class="share-impressions__img" 
+          src="/images/burj-al-arab.png"
+          alt="снимком вида 3" 
+          width="280px" 
+          height="250px"
+        >
+        <img 
+          class="share-impressions__img" 
+          src="/images/tropical-species.png" 
+          alt="снимком вида 4" 
+          width="280px" 
+          height="250px"
+        >
+        <img 
+          class="share-impressions__img" 
+          src="/images/grand-canyon.png" 
+          alt="снимком вида 5" 
+          width="580px" 
+          height="250px"
+        >
+        <img 
+          class="share-impressions__img" 
+          src="/images/traveler-note.png" 
+          alt="снимком вида 6" 
+          width="280px" 
+          height="250px"
+        >
       </div>
       <div class="share-impressions__pinterest">
-        <button class="btn share-impressions__btn" id="share-impressions__btn">Наш pinterest</button>
+        <button class="btn share-impressions__btn" id="share-impressions__btn">{{ 'main.shareImpressions' | translate }}</button>
       </div>
     </div>
   </section>

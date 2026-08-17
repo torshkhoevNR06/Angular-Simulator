@@ -21,9 +21,9 @@
 }
 
 .parent-panel .btn {
-  background: #7c5cff;
-  /* accent purple */
-  color: #fff;
+  background: var(--gold-color);
+  /* accent gold */
+  color: var(--btn-text, #fff);
   padding: 8px 12px;
   border-radius: 8px;
   border: none;
@@ -32,7 +32,7 @@
 }
 
 .parent-panel .btn:hover {
-  background: #5b3cff;
+  background: var(--btn-hover);
   transform: translateY(-1px);
 }
 

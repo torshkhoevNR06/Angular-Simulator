@@ -2,17 +2,18 @@
   <div class="container">
     <div class="inner">
       <div class="heading">
-        <h1 class="heading__item">Список Пользователей</h1>
+        <h1 class="heading__item">{{ 'usersPage.title' | translate }}</h1>
       </div>
       <app-create-user (createUser)="onAddUser($event)" />
       <app-users-filter (filterUser)="onChangeFilter($event)" />
-      {{ usersCount | plural: 'Пользователь' : 'Пользователя' : 'Пользователей' }}
+      {{ usersCount | plural: ('usersPage.userPlural.one' | translate) : ('usersPage.userPlural.few' | translate) :
+      ('usersPage.userPlural.many' | translate) }}
       <div class="user">
         @for (user of filteredUsers$ | async; track user.id) {
         <app-user-card [user]="user" (deleteUser)="onDeleteUser($event)" />
         } @empty {
         <div class="error">
-          <h1 class="error__title">Нет пользователей для отображения</h1>
+          <h1 class="error__title">{{ 'usersPage.empty' | translate }}</h1>
         </div>
         }
       </div>

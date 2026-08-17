@@ -4,20 +4,20 @@
       <div class="header__container">
         <div class="header__logo">
           <img src="/images/logo-rumtibet.svg" alt="Логотип компаний Румтибет">
-          <span class="company-name">{{ APP_CONFIG.companyName }}</span>
+          <span class="company-name">{{ 'header.companyName' | translate:{ appConfig: APP_CONFIG.companyName } }}</span>
         </div>
         <nav class="header__nav">
-          @for (page of pages; track page.page) {
+          @for (page of pages; track page.key) {
             <a 
               [routerLink]="page.path" 
               [routerLinkActive]="'active'" 
               [routerLinkActiveOptions]="{ exact: true }"
               class="link" 
             >
-              {{ page.page }}
+              {{ page.key | translate }}
             </a>
           } @empty {
-            <span>Навигация - пусто!</span>
+            <span>{{ 'header.navStub' | translate }}</span>
           }
           @if (APP_CONFIG.enableTheming) {
             <p-toggleswitch 
@@ -31,31 +31,36 @@
             <p-selectbutton 
               [options]="this.themeService.themes" 
               [ngModel]="theme$ | async" 
-              optionLabel="name"
+              optionLabel="key" 
               optionValue="value" 
               (onChange)="setTheme($event)" 
               aria-labelledby="basic" 
               [allowEmpty]="false"
-            />
+            >
+              <ng-template #item let-theme>
+                {{ theme.key | translate }}
+              </ng-template>
+            </p-selectbutton>
           }
           <a class="header__logout" (click)="authService.logout()" aria-label="Выйти">
             <fa-icon [icon]="faRightFromBracket" />
           </a>
         </nav>
+        <app-translate mode="normal" />
         <div class="header__btn">
           <button   
             class="btn btn-consultation" 
             id="btn-consultation"
             (click)="messageService.showSuccess('Message Content')"
           >
-            Консультация
+            {{ 'header.btnConsultation' | translate }}
           </button>
         </div>
       </div>
       @if (currentTask === 'counter') {
         <div class="header__timer">
           <span class="timer">{{ dateTime | date: DATE_PIPE_DEFAULT_OPTIONS.dateFormat }}</span>
-          <button class="btn btn-show-clicker" (click)="setCurrentTask('dateTime')">Показать кликер</button>
+          <button class="btn btn-show-clicker" (click)="setCurrentTask('dateTime')">{{ 'header.showClicker' | translate }}</button>
         </div>
       } @else {
         <div class="header__clicker">
@@ -64,7 +69,7 @@
             <span class="current-account">{{ counter }}</span>
             <button class="btn-minus" (click)="decrementCounter()" [disabled]="counter <= 0">-</button>
           </div>
-          <button class="btn btn-show-date" (click)="setCurrentTask('counter')">Показать дату</button>
+          <button class="btn btn-show-date" (click)="setCurrentTask('counter')">{{ 'header.btnShowDate' | translate }}</button>
         </div>
       }
     </div>

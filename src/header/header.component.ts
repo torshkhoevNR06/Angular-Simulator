@@ -16,10 +16,13 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../features/auth/service/auth.service';
 import { INavigation } from '../interface/INavigation';
 import { IAppConfig } from '../interface/IAppConfig';
+import { LanguageService } from '../service/language.service';
+import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateComponent } from '../translate/translate.component';
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe],
+  imports: [FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, TranslateComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -29,6 +32,7 @@ export class HeaderComponent {
   messageService: MessageService = inject(MessageService);
   themeService: ThemeService = inject(ThemeService);
   authService: AuthService = inject(AuthService);
+  languageService: LanguageService = inject(LanguageService);
   
   isDarkMode$: Observable<boolean> = this.themeService.isDarkMode$;
   theme$: Observable<Theme> = this.themeService.theme$;
@@ -46,9 +50,9 @@ export class HeaderComponent {
   faRightFromBracket: IconDefinition = faRightFromBracket;
 
   pages: INavigation[] = [
-    { page: 'Главная', path: '' },
-    { page: 'Пользователи', path: 'users' },
-    { page: 'Посты', path: 'posts' }
+    { key: 'header.pages.home', path: '' },
+    { key: 'header.pages.users', path: 'users' },
+    { key: 'header.pages.posts', path: 'posts' }
   ];
 
   constructor() {

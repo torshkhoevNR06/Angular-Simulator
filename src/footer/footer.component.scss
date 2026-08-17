@@ -3,13 +3,31 @@
 @include mix.ng-deep {
   .svg-inline--fa {
     transform: translateY(-2px);
-    color: #FFFFFF;
   }
 
-  .fa-telegram,
-  .fa-vk,
-  .fa-pinterest,
+  .fa-telegram {
+    color: #5a9ec9;
+    width: 32px;
+    height: 32px;
+    transform: none;
+  }
+
+  .fa-vk {
+    color: #4a8cdc;
+    width: 32px;
+    height: 32px;
+    transform: none;
+  }
+
+  .fa-pinterest {
+    color: #c4304b;
+    width: 32px;
+    height: 32px;
+    transform: none;
+  }
+
   .fa-skype {
+    color: #3ab5e0;
     width: 32px;
     height: 32px;
     transform: none;
@@ -141,7 +159,7 @@
   border-radius: 6px;
   padding: 40px 100px;
   z-index: 2;
-  box-shadow: 0 0 15px 0 #18121E1F;
+  box-shadow: 0 0 15px 0 rgba(43, 54, 48, 0.12);
   background-color: var(--bg-container);
 }
 
@@ -184,7 +202,7 @@
   padding: 12px 16px;
   font-weight: 300;
   font-size: 14px;
-  background-color: var(--bg-container);
+  background-color: var(--surface-elevated);
   color: var(--secondary-text-color);
 }
 
