@@ -27,7 +27,7 @@
         <div class="form__group">
           <label class="form__label" for="email">{{ 'usersPage.createUser.email' | translate }}</label>
           <input animatedBorder class="form__input" id="email" type="email" formControlName="email"
-            placeholder="example@email.com" />
+            [placeholder]="'usersPage.createUser.emailPlaceholder' | translate" />
         </div>
       </div>
       <div class="form__divider"></div>
@@ -43,7 +43,7 @@
         <div class="form__group">
           <label class="form__label" for="website">{{ 'usersPage.createUser.website' | translate }}</label>
           <input animatedBorder class="form__input" id="website" type="url" formControlName="website"
-            placeholder="example.com" />
+            [placeholder]="'usersPage.createUser.websitePlaceholder' | translate" />
         </div>
       </div>
     </div>

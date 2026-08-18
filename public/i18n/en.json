@@ -28,7 +28,10 @@
     "navStub": "Navigation is empty!",
     "btnConsultation": "Consultation",
     "btnShowDate": "Show date",
-    "showClicker": "Show clicker"
+    "showClicker": "Show clicker",
+    "logoAlt": "Rumtibet companies logo",
+    "consultationMessage": "Thank you for your request! We will contact you.",
+    "logout": "Logout"
   },
   "main": {
     "heading": "Enjoy a mountain walk with a team of like-minded people",
@@ -122,7 +125,25 @@
     "otherMaterial": "Other materials",
     "photoReport": "photo report",
     "shareImpressionsTwo": "We share impressions",
-    "shareImpressions": "Our Pinterest"
+    "shareImpressions": "Our Pinterest",
+    "alts": {
+      "mountainPeak": "mountain peak",
+      "alpineMeadowHouse": "wooden house in alpine meadow",
+      "playButton": "play button",
+      "tropicalLook": "tropical view",
+      "volcanicCrater": "volcanic crater",
+      "snowyMountains": "snowy mountains",
+      "orangeMineralRiver": "mineral waters",
+      "cappadociaAtDawn": "view 1",
+      "travelersGear": "view 2",
+      "burjAlArab": "view 3",
+      "tropicalSpecies": "view 4",
+      "grandCanyon": "view 5",
+      "travelerNote": "view 6"
+    },
+    "findProgramMessage": "Tour program found",
+    "tourProgramMessage": "Tour program opened",
+    "otherMaterialMessage": "Other materials loaded"
   },
   "usersPage": {
     "title": "Users List",
@@ -166,6 +187,8 @@
       "catchphrasePlaceholder": "Company tagline (max. 200)",
       "bs": "Service",
       "bsPlaceholder": "Service type (max. 100)",
+      "emailPlaceholder": "example@email.com",
+      "websitePlaceholder": "example.com",
       "submit": "Create user",
       "invalid": "Form is invalid"
     },
@@ -279,6 +302,31 @@
     "stubArticle": "Articles are empty!",
     "servicePlug": "Services are empty!",
     "copyrightText": "IP Konstantinopolsky K.K., 2023",
-    "copyrightLink": "Personal data processing policy"
+    "copyrightLink": "Personal data processing policy",
+    "emailPlaceholder": "name@domain.com",
+    "contactEmail": "info@domain.com",
+    "contactPhone": "+7 (123) 456-78-90",
+    "newsSubscriptionMessage": "You have subscribed to the newsletter"
+  },
+  "message": {
+    "altLetterIcon": "letter icon",
+    "altCloseIcon": "close messages icon"
+  },
+  "notFound": {
+    "title": "Page not found"
+  },
+  "homework": {
+    "changeName": "Change name",
+    "user": "User",
+    "counter": "Counter:",
+    "change1": "Change 1",
+    "change2": "Change 2",
+    "change3": "Change 3",
+    "change4": "Change 4",
+    "change5": "Change 5",
+    "change6": "Change 6"
+  },
+  "common": {
+    "serverError": "Server error: {{ status }}"
   }
 }

@@ -48,7 +48,7 @@ export class AuthComponent {
         finalize(() => this.loaderService.hideLoader())
       ).subscribe();
     } else {
-      this.messageService.showError(this.translate.instant('userPage.createUser.invalid'));
+      this.messageService.showError(this.translate.instant('usersPage.createUser.invalid'));
     }
   }
 

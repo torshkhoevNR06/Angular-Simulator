@@ -91,6 +91,10 @@ export class HeaderComponent {
     this.currentTask = task;
   }
 
+  onConsultation(): void {
+    this.messageService.showSuccess(this.languageService.translate.instant('header.consultationMessage'));
+  }
+
   private saveLastVisit(): void {
     localStorage.setItem('userDate', JSON.stringify(new Date()));
   }

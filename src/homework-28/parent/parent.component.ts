@@ -1,24 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { ChangeDetectionComponentOne } from '../change-detection-one/change-detection-one.component';
 import { ChangeDetectionComponentTwo } from '../change-detection-two/change-detection-two.component';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-parent',
-  imports: [ChildComponent, ChangeDetectionComponentOne, ChangeDetectionComponentTwo],
+  imports: [ChildComponent, ChangeDetectionComponentOne, ChangeDetectionComponentTwo, TranslatePipe],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.scss'
 })
 export class ParentComponent {
 
   user = { name: 'Alex', age: 20 };
+  private translate: TranslateService = inject(TranslateService);
 
-  changeName(): void {
-    // Этот вариант не сработает из-за того что он данная запись не изменяет ссылку на объект и для Angular'a этот объект при строгом сравнений остаётся тем же и механизм обнаружения изменений не запуститься в данный компонент
-    // this.user.name = 'Eugene';
-
-    // Данная запись обновляет ссылку объекта и поэтому стратегия обнаружения сработает
-    this.user = { ...this.user, name: 'Eugene' };
+  onChangeName(): void {
+    this.user = { ...this.user, name: this.translate.instant('homework.changeName') };
   }
 
 }

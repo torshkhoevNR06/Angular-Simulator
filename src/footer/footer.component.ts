@@ -53,4 +53,7 @@ export class FooterComponent {
     { id: 4, image: faSkype }
   ];
 
+  onNewsSubscription(): void {
+    this.messageService.showSuccess(this.languageService.translate.instant('footer.newsSubscriptionMessage'));
+  }
 }

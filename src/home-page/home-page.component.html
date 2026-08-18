@@ -68,7 +68,7 @@
             [class.find-program__disabled-btn]="!isFormValid()"
             id="find-program-btn" 
             [disabled]="!isFormValid()" 
-            (click)="messageService.showInfo('Message Content')"
+            (click)="onFindProgram()"
           >
             {{ 'main.findProgram' | translate }}
           </button>
@@ -91,19 +91,19 @@
     <div class="container">
       <div class="our-approach__showreel">
         <a class="img-mountain__link" id="img-mountain-link" href="#">
-          <img src="/images/mountain-peak.png" alt="картинка горный пик" width="350px" height="400px">
+          <img src="/images/mountain-peak.png" [alt]="'main.alts.mountainPeak' | translate" width="350px" height="400px">
         </a>
         <div class="showreel-container">
           <a class="alpine-meadow-house__link" id="alpine-meadow-house-link" href="#">
             <img 
               src="/images/alpine-meadow-house.png" 
-              alt="картинка деревянный домик на альпийском лугу" 
+              [alt]="'main.alts.alpineMeadowHouse' | translate"
               width="350px"
               height="400px"
             >
           </a>
           <a class="img-play-link" id="img-play-link" href="#">
-            <img class="img-play-btn" src="/images/play-button.svg" alt="кнопка плеер">
+            <img class="img-play-btn" src="/images/play-button.svg" [alt]="'main.alts.playButton' | translate">
           </a>
         </div>
       </div>
@@ -114,7 +114,7 @@
         <button 
           class="btn our-approach__btn" 
           id="our-approach-btn"
-          (click)="messageService.showWarn('Message Content')"
+          (click)="onTourProgram()"
         >
           {{ 'main.tourProgram' | translate }}
         </button>
@@ -150,10 +150,10 @@
       </div>
 
       <div class="our-offer__images">
-        <img class="img-participant" src="/images/tropical-look.png" alt="картинка тропический вид" width="250px" height="250px">
-        <img class="img-participant" src="/images/volcanic-crater.png" alt="картинка вулканический кратер" width="250px" height="250px">
-        <img class="img-participant" src="/images/snowy-mountains.png" alt="картинка заснеженные горы" width="250px" height="250px">
-        <img class="img-participant" src="/images/orange-mineral-river.png" alt="картинка минеральные воды" width="250px" height="250px">
+        <img class="img-participant" src="/images/tropical-look.png" [alt]="'main.alts.tropicalLook' | translate" width="250px" height="250px">
+        <img class="img-participant" src="/images/volcanic-crater.png" [alt]="'main.alts.volcanicCrater' | translate" width="250px" height="250px">
+        <img class="img-participant" src="/images/snowy-mountains.png" [alt]="'main.alts.snowyMountains' | translate" width="250px" height="250px">
+        <img class="img-participant" src="/images/orange-mineral-river.png" [alt]="'main.alts.orangeMineralRiver' | translate" width="250px" height="250px">
       </div>
     </div>
   </section>
@@ -219,7 +219,7 @@
         <button 
           class="btn other-material__btn" 
           id="other-material__btn"
-          (click)="messageService.showError('Message Content')"
+          (click)="onOtherMaterial()"
         >
           {{ 'main.otherMaterial' | translate }}
         </button>
@@ -233,45 +233,45 @@
         <h3 class="title">{{ 'main.shareImpressionsTwo' | translate }}</h3>
       </div>
       <div class="share-impressions__halileria">
-        <img 
-          class="share-impressions__img" 
-          src="/images/cappadocia-at-dawn.png"
-          alt="снимком вида 1" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/cappadocia-at-dawn.png"
+            [alt]="'main.alts.cappadociaAtDawn' | translate"
           width="580px" 
           height="250px"
           >
-        <img 
-          class="share-impressions__img" 
-          src="/images/travelers-gear.png" 
-          alt="снимком вида 2" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/travelers-gear.png" 
+            [alt]="'main.alts.travelersGear' | translate"
           width="280px" 
           height="250px"
         >
-        <img 
-          class="share-impressions__img" 
-          src="/images/burj-al-arab.png"
-          alt="снимком вида 3" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/burj-al-arab.png"
+            [alt]="'main.alts.burjAlArab' | translate"
           width="280px" 
           height="250px"
         >
-        <img 
-          class="share-impressions__img" 
-          src="/images/tropical-species.png" 
-          alt="снимком вида 4" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/tropical-species.png"
+            [alt]="'main.alts.tropicalSpecies' | translate"
           width="280px" 
           height="250px"
         >
-        <img 
-          class="share-impressions__img" 
-          src="/images/grand-canyon.png" 
-          alt="снимком вида 5" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/grand-canyon.png"
+            [alt]="'main.alts.grandCanyon' | translate"
           width="580px" 
           height="250px"
         >
-        <img 
-          class="share-impressions__img" 
-          src="/images/traveler-note.png" 
-          alt="снимком вида 6" 
+          <img 
+            class="share-impressions__img" 
+            src="/images/traveler-note.png"
+            [alt]="'main.alts.travelerNote' | translate"
           width="280px" 
           height="250px"
         >

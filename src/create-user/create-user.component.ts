@@ -49,8 +49,8 @@ export class CreateUserComponent {
       this.createUser.emit(this.userForm.value);
       this.userForm.reset();
     } else {
-      this.messageService.showError(this.translate.instant('createUser.submit'));
-      throw new Error('Проверьте, правильно ли заполнены все поля!');
+      this.messageService.showError(this.translate.instant('usersPage.createUser.invalid'));
+      throw new Error(this.translate.instant('usersPage.createUser.invalid'));
     }
   }
 

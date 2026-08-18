@@ -28,7 +28,10 @@
     "navStub": "Navigatsiya bo'sh!",
     "btnConsultation": "Konsultatsiya",
     "btnShowDate": "Sanani ko'rsatish",
-    "showClicker": "Clickerni ko'rsatish"
+    "showClicker": "Clickerni ko'rsatish",
+    "logoAlt": "Rumtibet kompaniyalari logotipi",
+    "consultationMessage": "Ariza uchun tashakkur! Siz bilan bog'lanamiz.",
+    "logout": "Chiqish"
   },
   "main": {
     "heading": "O'zingizga yaqin odamlar bilan tog' yurishidan zavqlaning",
@@ -122,7 +125,25 @@
     "otherMaterial": "Boshqa materiallar",
     "photoReport": "fotohisobot",
     "shareImpressionsTwo": "Hisobotlarni baham ko'ramiz",
-    "shareImpressions": "Bizning Pinterest"
+    "shareImpressions": "Bizning Pinterest",
+    "alts": {
+      "mountainPeak": "tog' cho'qqisi",
+      "alpineMeadowHouse": "alp mevodagi yog'och uy",
+      "playButton": "plei tugmasi",
+      "tropicalLook": "tropik manzara",
+      "volcanicCrater": "vulkanik krater",
+      "snowyMountains": "qorli tog'lar",
+      "orangeMineralRiver": "mineral suvlari",
+      "cappadociaAtDawn": "ko'rinish 1",
+      "travelersGear": "ko'rinish 2",
+      "burjAlArab": "ko'rinish 3",
+      "tropicalSpecies": "ko'rinish 4",
+      "grandCanyon": "ko'rinish 5",
+      "travelerNote": "ko'rinish 6"
+    },
+    "findProgramMessage": "Tur dasturi topildi",
+    "tourProgramMessage": "Tur dasturi ochildi",
+    "otherMaterialMessage": "Boshqa materiallar yuklandi"
   },
   "usersPage": {
     "title": "Foydalanuvchilar ro'yxati",
@@ -166,6 +187,8 @@
       "catchphrasePlaceholder": "Kompaniya slaganasi (maks. 200)",
       "bs": "Xizmat",
       "bsPlaceholder": "Xizmat turi (maks. 100)",
+      "emailPlaceholder": "example@email.com",
+      "websitePlaceholder": "example.com",
       "submit": "Foydalanuvchi yaratish",
       "invalid": "Forma yaroqsiz"
     },
@@ -279,6 +302,31 @@
     "stubArticle": "Maqolalar bo'sh!",
     "servicePlug": "Xizmatlar bo'sh!",
     "copyrightText": "IP Konstantinopolsky K.K., 2023",
-    "copyrightLink": "Shaxsiy ma'lumotlarni qayta ishlash siyosati"
+    "copyrightLink": "Shaxsiy ma'lumotlarni qayta ishlash siyosati",
+    "emailPlaceholder": "name@domain.com",
+    "contactEmail": "info@domain.com",
+    "contactPhone": "+7 (123) 456-78-90",
+    "newsSubscriptionMessage": "Siz yangiliklarga obuna bo'ldingiz"
+  },
+  "message": {
+    "altLetterIcon": "xat iconasi",
+    "altCloseIcon": "xabarlarni yopish iconasi"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi"
+  },
+  "homework": {
+    "changeName": "Ismni o'zgartirish",
+    "user": "Foydalanuvchi",
+    "counter": "Hisoblagich:",
+    "change1": "O'zgartirish 1",
+    "change2": "O'zgartirish 2",
+    "change3": "O'zgartirish 3",
+    "change4": "O'zgartirish 4",
+    "change5": "O'zgartirish 5",
+    "change6": "O'zgartirish 6"
+  },
+  "common": {
+    "serverError": "Server xatosi: {{ status }}"
   }
 }

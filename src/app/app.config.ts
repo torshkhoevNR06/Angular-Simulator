@@ -41,7 +41,7 @@ const getSavedTheme = (appConfigValue: IAppConfig): PresetVariants => {
 };
 
 const appConfigValue: IAppConfig = {
-  companyName: 'АйТи-Симулятор | Румтибет',
+  companyName: 'header.companyName',
   enableLogs: false,
   enableNotifications: true,
   enableTheming: true,

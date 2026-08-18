@@ -9,7 +9,7 @@ import { IArticle } from '../interface/IArticle';
 import { ILocation } from '../interface/ILocation';
 import { IParticipant } from '../interface/IParticipant';
 import { DATE_PIPE_DEFAULT_OPTIONS, DatePipe, DatePipeConfig } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-page',
@@ -20,6 +20,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class HomePageComponent {
   
   messageService: MessageService = inject(MessageService);
+  private translate: TranslateService = inject(TranslateService);
 
   liveInputValue!: string;
   selectedLocation!: boolean;
@@ -135,6 +136,18 @@ export class HomePageComponent {
 
   isFormValid(): boolean {
     return this.selectedLocation && !!this.selectedDate && this.selectedParticipants;
+  }
+
+  onFindProgram(): void {
+    this.messageService.showInfo(this.translate.instant('main.findProgramMessage'));
+  }
+
+  onTourProgram(): void {
+    this.messageService.showWarn(this.translate.instant('main.tourProgramMessage'));
+  }
+
+  onOtherMaterial(): void {
+    this.messageService.showError(this.translate.instant('main.otherMaterialMessage'));
   }
 
 }

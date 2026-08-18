@@ -14,7 +14,7 @@
     "desc": "Тёмный интерфейс, быстрая навигация и привычная структура работы с данными."
   },
   "header": {
-    "companyName": "{{ appConfig }}",
+    "companyName": "АйТи-Симулятор | Румтибет",
     "pages": {
       "home": "Главная",
       "users": "Пользователи",
@@ -28,7 +28,10 @@
     "navStub": "Навигация - пусто!",
     "btnConsultation": "Консультация",
     "btnShowDate": "Показать дату",
-    "showClicker": "Показать кликер"
+    "showClicker": "Показать кликер",
+    "logoAlt": "Логотип компаний Румтибет",
+    "consultationMessage": "Спасибо за заявку! Мы свяжемся с вами.",
+    "logout": "Выйти"
   },
   "main": {
     "heading": "Насладись прогулкой в горах с командой единомышленников",
@@ -122,7 +125,25 @@
     "otherMaterial": "Другие материалы",
     "photoReport": "фото-отчет",
     "shareImpressionsTwo": "Делимся впечатлениями",
-    "shareImpressions": "Наш pinterest"
+    "shareImpressions": "Наш pinterest",
+    "alts": {
+      "mountainPeak": "горный пик",
+      "alpineMeadowHouse": "деревянный домик на альпийском лугу",
+      "playButton": "кнопка плеер",
+      "tropicalLook": "тропический вид",
+      "volcanicCrater": "вулканический кратер",
+      "snowyMountains": "заснеженные горы",
+      "orangeMineralRiver": "минеральные воды",
+      "cappadociaAtDawn": "снимком вида 1",
+      "travelersGear": "снимком вида 2",
+      "burjAlArab": "снимком вида 3",
+      "tropicalSpecies": "снимком вида 4",
+      "grandCanyon": "снимком вида 5",
+      "travelerNote": "снимком вида 6"
+    },
+    "findProgramMessage": "Программа тура найдена",
+    "tourProgramMessage": "Тур программа открыта",
+    "otherMaterialMessage": "Другие материалы загружены"
   },
   "usersPage": {
     "title": "Список Пользователей",
@@ -166,6 +187,8 @@
       "catchphrasePlaceholder": "Слоган компании (макс. 200)",
       "bs": "Обслуживание",
       "bsPlaceholder": "Тип обслуживания (макс. 100)",
+      "emailPlaceholder": "example@email.com",
+      "websitePlaceholder": "example.com",
       "submit": "Создать пользователя",
       "invalid": "Форма не валидна"
     },
@@ -279,6 +302,31 @@
     "stubArticle": "Статьи - пусто!",
     "servicePlug": "Услуги - пусто!",
     "copyrightText": "ИП Константинопольский К.К., 2023",
-    "copyrightLink": "Политика обработки персональных данных"
+    "copyrightLink": "Политика обработки персональных данных",
+    "emailPlaceholder": "name@domain.com",
+    "contactEmail": "info@domain.com",
+    "contactPhone": "+7 (123) 456-78-90",
+    "newsSubscriptionMessage": "Вы подписались на новости"
+  },
+  "message": {
+    "altLetterIcon": "иконка письмо",
+    "altCloseIcon": "иконка закрытие сообщений"
+  },
+  "notFound": {
+    "title": "Страница не найдена"
+  },
+  "homework": {
+    "changeName": "Изменить имя",
+    "user": "Пользователь",
+    "counter": "Счётчик:",
+    "change1": "Изменить 1",
+    "change2": "Изменить 2",
+    "change3": "Изменить 3",
+    "change4": "Изменить 4",
+    "change5": "Изменить 5",
+    "change6": "Изменить 6"
+  },
+  "common": {
+    "serverError": "Ошибка сервера: {{ status }}"
   }
 }

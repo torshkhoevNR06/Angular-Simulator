@@ -3,8 +3,8 @@
     <div class="header__top">
       <div class="header__container">
         <div class="header__logo">
-          <img src="/images/logo-rumtibet.svg" alt="Логотип компаний Румтибет">
-          <span class="company-name">{{ 'header.companyName' | translate:{ appConfig: APP_CONFIG.companyName } }}</span>
+          <img src="/images/logo-rumtibet.svg" [alt]="'header.logoAlt' | translate">
+          <span class="company-name">{{ 'header.companyName' | translate }}</span>
         </div>
         <nav class="header__nav">
           @for (page of pages; track page.key) {
@@ -42,7 +42,7 @@
               </ng-template>
             </p-selectbutton>
           }
-          <a class="header__logout" (click)="authService.logout()" aria-label="Выйти">
+          <a class="header__logout" (click)="authService.logout()" [attr.aria-label]="'header.logout' | translate">
             <fa-icon [icon]="faRightFromBracket" />
           </a>
         </nav>
@@ -51,7 +51,7 @@
           <button   
             class="btn btn-consultation" 
             id="btn-consultation"
-            (click)="messageService.showSuccess('Message Content')"
+            (click)="onConsultation()"
           >
             {{ 'header.btnConsultation' | translate }}
           </button>
