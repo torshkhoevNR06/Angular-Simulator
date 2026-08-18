@@ -57,17 +57,20 @@
     </div>
     <div class="work__item mission">
       <span class="work__label label">{{ 'usersPage.userCard.mission' | translate }}</span>
-      <span class="work__value value italic">{{ user.company.catchPhrase || ('usersPage.userCard.unknown' | translate)
-        }}</span>
+      <span class="work__value value italic">{{ user.company.catchPhrase || ('usersPage.userCard.unknown' | translate)}}</span>
     </div>
     <div class="work__item">
       <span class="work__label label">{{ 'usersPage.userCard.specialization' | translate }}</span>
-      <span class="work__value value secondary">{{ user.company.bs || ('usersPage.userCard.unknown' | translate)
-        }}</span>
+      <span class="work__value value secondary">{{ user.company.bs || ('usersPage.userCard.unknown' | translate)}}</span>
     </div>
   </div>
   <div class="delete-user">
-    <button fontWeightHover class="delete-user__btn" (click)="onDeleteClick(user.id)">{{ 'usersPage.userCard.deleteUser'
-      | translate }}</button>
+    <button 
+      fontWeightHover 
+      class="delete-user__btn" 
+      (click)="onDeleteClick(user.id)"
+    >
+      {{ 'usersPage.userCard.deleteUser' | translate }}
+    </button>
   </div>
 </div>

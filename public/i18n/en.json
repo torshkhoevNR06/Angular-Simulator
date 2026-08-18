@@ -325,8 +325,5 @@
     "change4": "Change 4",
     "change5": "Change 5",
     "change6": "Change 6"
-  },
-  "common": {
-    "serverError": "Server error: {{ status }}"
   }
 }

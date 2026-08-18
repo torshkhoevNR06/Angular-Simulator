@@ -92,7 +92,7 @@ export class HeaderComponent {
   }
 
   onConsultation(): void {
-    this.messageService.showSuccess(this.languageService.translate.instant('header.consultationMessage'));
+    this.messageService.showSuccess(this.languageService.translateService.instant('header.consultationMessage'));
   }
 
   private saveLastVisit(): void {

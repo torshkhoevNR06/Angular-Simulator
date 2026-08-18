@@ -54,6 +54,7 @@ export class FooterComponent {
   ];
 
   onNewsSubscription(): void {
-    this.messageService.showSuccess(this.languageService.translate.instant('footer.newsSubscriptionMessage'));
+    this.messageService.showSuccess(this.languageService.translateService.instant('footer.newsSubscriptionMessage'));
   }
+
 }

@@ -6,12 +6,12 @@ import { AsyncPipe } from '@angular/common';
   selector: 'app-translate',
   imports: [AsyncPipe],
   templateUrl: './translate.component.html',
-  styleUrl: './translate.component.scss',
-  host: { '[class.translate--auth]': 'mode === "auth"' }
+  styleUrl: './translate.component.scss'
 })
 export class TranslateComponent {
 
   @Input() mode: 'normal' | 'auth' = 'normal';
+  
   languageService: LanguageService = inject(LanguageService);
 
 }

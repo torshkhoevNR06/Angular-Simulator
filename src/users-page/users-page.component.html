@@ -10,11 +10,11 @@
       ('usersPage.userPlural.many' | translate) }}
       <div class="user">
         @for (user of filteredUsers$ | async; track user.id) {
-        <app-user-card [user]="user" (deleteUser)="onDeleteUser($event)" />
+          <app-user-card [user]="user" (deleteUser)="onDeleteUser($event)" />
         } @empty {
-        <div class="error">
-          <h1 class="error__title">{{ 'usersPage.empty' | translate }}</h1>
-        </div>
+          <div class="error">
+            <h1 class="error__title">{{ 'usersPage.empty' | translate }}</h1>
+          </div>
         }
       </div>
     </div>

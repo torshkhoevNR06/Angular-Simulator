@@ -8,7 +8,6 @@ import { Color } from '../enum/Color';
 import { APP_CONFIG } from '../app-config.token';
 import { IAppConfig } from '../interface/IAppConfig';
 import { TranslateService } from '@ngx-translate/core';
-import { LocalStorageService } from '../service/local-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,6 @@ import { LocalStorageService } from '../service/local-storage.service';
 export class AppComponent {
 
   private translate: TranslateService = inject(TranslateService);
-  private localStorageService: LocalStorageService = inject(LocalStorageService);
   
   APP_CONFIG: IAppConfig = inject(APP_CONFIG);
   messageType: typeof MessageType = MessageType;
