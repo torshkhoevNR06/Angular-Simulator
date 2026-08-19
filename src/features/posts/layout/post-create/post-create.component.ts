@@ -1,10 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { MessageService } from '../../../../service/message.service';
 import { catchError, tap, throwError } from 'rxjs';
@@ -16,9 +11,10 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   selector: 'app-post-create',
   imports: [RouterLink, ReactiveFormsModule, TranslatePipe],
   templateUrl: './post-create.component.html',
-  styleUrl: './post-create.component.scss',
+  styleUrl: './post-create.component.scss'
 })
 export class PostCreateComponent {
+
   private fb: FormBuilder = inject(FormBuilder);
   private router: Router = inject(Router);
 
@@ -32,16 +28,15 @@ export class PostCreateComponent {
     tags: [[], Validators.required],
     reactions: this.fb.group({
       likes: [null, Validators.required],
-      dislikes: [null, Validators.required],
+      dislikes: [null, Validators.required]
     }),
     views: [null, Validators.required],
-    userId: [null, Validators.required],
+    userId: [null, Validators.required]
   });
 
   onCreatePost(): void {
     const tags: string[] = this.createPostForm
-      .get('tags')!
-      .value.split(',')
+      .get('tags')!.value.split(',')
       .map((str: string) => str.trim())
       .filter((str: string) => str !== '');
 
@@ -51,25 +46,18 @@ export class PostCreateComponent {
         .pipe(
           tap(() => {
             this.router.navigate([`/posts`]);
-            this.messageService.showInfo(
-              this.translate.instant('postsPage.messages.created'),
-            );
+            this.messageService.showInfo(this.translate.instant('postsPage.messages.created'));
             this.createPostForm.reset();
           }),
           catchError((error: HttpErrorResponse) => {
-            this.messageService.showError(
-              this.translate.instant('postsPage.messages.createError', {
-                error,
-              }),
-            );
+            this.messageService.showError(this.translate.instant('postsPage.messages.createError', { error }));
             return throwError(() => error);
-          }),
+          })
         )
         .subscribe();
     } else {
-      this.messageService.showError(
-        this.translate.instant('postsPage.messages.invalid'),
-      );
+      this.messageService.showError(this.translate.instant('postsPage.messages.invalid'));
     }
   }
+
 }

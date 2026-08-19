@@ -18,33 +18,33 @@ import { INavigation } from '../interface/INavigation';
 import { IAppConfig } from '../interface/IAppConfig';
 import { LanguageService } from '../service/language.service';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TranslateComponent } from '../translate/translate.component';
+import { TranslateComponent } from '../language-buttons/language-buttons.component';
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, TranslateComponent],
+  imports: [ FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, TranslateComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  
+
   private localStorageService: LocalStorageService = inject(LocalStorageService);
   messageService: MessageService = inject(MessageService);
   themeService: ThemeService = inject(ThemeService);
   authService: AuthService = inject(AuthService);
   languageService: LanguageService = inject(LanguageService);
-  
+
   isDarkMode$: Observable<boolean> = this.themeService.isDarkMode$;
   theme$: Observable<Theme> = this.themeService.theme$;
-  
+
   APP_CONFIG: IAppConfig = this.themeService.APP_CONFIG;
   DATE_PIPE_DEFAULT_OPTIONS: DatePipeConfig = inject(DATE_PIPE_DEFAULT_OPTIONS);
-  
+
   currentTask!: 'counter' | 'dateTime';
   companyName: string = 'Румтибет';
   dateTime!: Date;
   counter: number = 0;
-  
+
   faMoon: IconDefinition = faMoon;
   faSun: IconDefinition = faSun;
   faRightFromBracket: IconDefinition = faRightFromBracket;
@@ -58,7 +58,7 @@ export class HeaderComponent {
   constructor() {
     this.saveVisitsCount();
     this.saveLastVisit();
-    
+
     const saveCounter: number = this.localStorageService.getItem('counter')!;
     if (saveCounter) {
       this.counter = saveCounter;
@@ -81,7 +81,7 @@ export class HeaderComponent {
     this.counter++;
     localStorage.setItem('counter', JSON.stringify(this.counter));
   }
-  
+
   decrementCounter(): void {
     this.counter--;
     localStorage.setItem('counter', JSON.stringify(this.counter));
@@ -92,7 +92,9 @@ export class HeaderComponent {
   }
 
   onConsultation(): void {
-    this.messageService.showSuccess(this.languageService.translateService.instant('header.consultationMessage'));
+    this.messageService.showSuccess(
+      this.languageService.translateService.instant('header.consultationMessage')
+    );
   }
 
   private saveLastVisit(): void {

@@ -8,13 +8,15 @@ import { TranslatePipe } from '@ngx-translate/core';
   selector: 'app-post-detail',
   imports: [RouterLink, TranslatePipe],
   templateUrl: './post-detail.component.html',
-  styleUrl: './post-detail.component.scss',
+  styleUrl: './post-detail.component.scss'
 })
 export class PostDetailComponent implements OnInit {
+
   private route: ActivatedRoute = inject(ActivatedRoute);
   post!: IPost;
 
   ngOnInit(): void {
     this.post = this.route.snapshot.data['post'];
   }
+  
 }

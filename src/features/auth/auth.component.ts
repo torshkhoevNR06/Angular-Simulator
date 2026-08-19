@@ -7,7 +7,7 @@ import { MessageService } from '../../service/message.service';
 import { LoaderService } from '../../service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { TranslateComponent } from '../../translate/translate.component';
+import { TranslateComponent } from '../../language-buttons/language-buttons.component';
 
 @Component({
   selector: 'app-auth',
@@ -35,18 +35,19 @@ export class AuthComponent {
   onAuthForm(): void {
     if (this.authForm.valid) {
       this.loaderService.showLoader();
-      
-      this.authService.login(this.authForm.value).pipe(
-        tap(() => {
-          this.router.navigate(['']);
-          this.messageService.showInfo(this.translate.instant('auth.loginSuccess'));
-        }),
-        catchError((error: HttpErrorResponse) => {
-          this.messageService.showError(this.translate.instant('auth.loginError'));
-          return throwError(() => error);
-        }),
-        finalize(() => this.loaderService.hideLoader())
-      ).subscribe();
+
+      this.authService.login(this.authForm.value)
+        .pipe(
+          tap(() => {
+            this.router.navigate(['']);
+            this.messageService.showInfo(this.translate.instant('auth.loginSuccess'));
+          }),
+          catchError((error: HttpErrorResponse) => {
+            this.messageService.showError(this.translate.instant('auth.loginError'));
+            return throwError(() => error);
+          }),
+          finalize(() => this.loaderService.hideLoader())
+        ).subscribe();
     } else {
       this.messageService.showError(this.translate.instant('usersPage.createUser.invalid'));
     }

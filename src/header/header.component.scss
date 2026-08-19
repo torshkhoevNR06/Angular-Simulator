@@ -26,6 +26,10 @@
   font-family: "Nunito Sans";
   color: var(--bg-container);
 
+  &__logo {
+    max-width: 300px;
+  }
+
   &__inner {
     max-width: 1920px;
     margin: 0 auto;
