@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 
 @Component({
-  selector: 'app-translate',
+  selector: 'app-language',
   imports: [AsyncPipe, SelectButtonModule, FormsModule],
-  templateUrl: './language-buttons.component.html',
-  styleUrl: './language-buttons.component.scss'
+  templateUrl: './language.component.html',
+  styleUrl: './language.component.scss'
 })
-export class TranslateComponent {
+export class Language {
   
   languageService: LanguageService = inject(LanguageService);
 

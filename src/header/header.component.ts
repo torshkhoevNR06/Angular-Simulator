@@ -18,11 +18,11 @@ import { INavigation } from '../interface/INavigation';
 import { IAppConfig } from '../interface/IAppConfig';
 import { LanguageService } from '../service/language.service';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TranslateComponent } from '../language-buttons/language-buttons.component';
+import { Language } from '../language/language.component';
 
 @Component({
   selector: 'app-header',
-  imports: [ FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, TranslateComponent],
+  imports: [ FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, Language],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

@@ -1,11 +1,10 @@
 import { DestroyRef, inject, Injectable } from '@angular/core';
 import { TranslateService, type Translation } from '@ngx-translate/core';
 import { LocalStorageService } from './local-storage.service';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, take, tap } from 'rxjs';
 import { PrimeNG } from 'primeng/config';
 import { Language } from '../enum/Language';
 import { ILanguage } from '../interface/ILanguage';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root'
@@ -42,7 +41,7 @@ export class LanguageService {
     this.localStorageService.setItem('language', currentLanguage);
     this.translateService.get('primeng').pipe(
       tap((translations: Translation) => this.primeng.setTranslation(translations)),
-      takeUntilDestroyed(this.destroyRef)
+      take(1)
     ).subscribe();
     this.languageSubject.next(currentLanguage);
   }

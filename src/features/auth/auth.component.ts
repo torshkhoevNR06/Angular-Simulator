@@ -7,11 +7,11 @@ import { MessageService } from '../../service/message.service';
 import { LoaderService } from '../../service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { TranslateComponent } from '../../language-buttons/language-buttons.component';
+import { Language } from '../../language/language.component';
 
 @Component({
   selector: 'app-auth',
-  imports: [ReactiveFormsModule, TranslatePipe, TranslateComponent],
+  imports: [ReactiveFormsModule, TranslatePipe, Language],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })
