@@ -40,8 +40,7 @@ export class LanguageService {
     this.translateService.use(currentLanguage);
     this.localStorageService.setItem('language', currentLanguage);
     this.translateService.get('primeng').pipe(
-      tap((translations: Translation) => this.primeng.setTranslation(translations)),
-      take(1)
+      tap((translations: Translation) => this.primeng.setTranslation(translations))
     ).subscribe();
     this.languageSubject.next(currentLanguage);
   }
