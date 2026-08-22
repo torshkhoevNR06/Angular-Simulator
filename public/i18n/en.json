@@ -1,0 +1,329 @@
+{
+  "auth": {
+    "login": "Authorization",
+    "loginAccount": "Login to account",
+    "userName": "Username",
+    "userPassword": "Password",
+    "authInputUserName": "Enter username",
+    "authInputPassword": "Enter password",
+    "btnLogin": "Login",
+    "loginSuccess": "You are logged in",
+    "loginError": "Error {{ status }}: You entered an invalid username",
+    "mentoringName": "IT-Simulator",
+    "title": "Manage posts, users and content in one place",
+    "desc": "Dark interface, fast navigation and familiar data management structure."
+  },
+  "header": {
+    "companyName": "IT-Simulator | Rumtibet",
+    "pages": {
+      "home": "Home",
+      "users": "Users",
+      "posts": "Posts"
+    },
+    "themes": {
+      "nora": "Nora",
+      "aura": "Aura",
+      "lara": "Lara"
+    },
+    "navStub": "Navigation is empty!",
+    "btnConsultation": "Consultation",
+    "btnShowDate": "Show date",
+    "showClicker": "Show clicker",
+    "logoAlt": "Rumtibet companies logo",
+    "consultationMessage": "Thank you for your request! We will contact you.",
+    "logout": "Logout"
+  },
+  "main": {
+    "heading": "Enjoy a mountain walk with a team of like-minded people",
+    "locationTour": "Location for the tour",
+    "locations": {
+      "iceland": "Iceland",
+      "novosibirsk": "Novosibirsk",
+      "costaRica": "Costa Rica"
+    },
+    "blockLocations": "Failed to display the list of locations!",
+    "selectionList": "choose from the list",
+    "date": "dd.mm.yyyy",
+    "specifyRange": "specify the range",
+    "selectedParticipants": "{{ selectedParticipants }}",
+    "members": "Participants",
+    "participants": {
+      "Alexander": "Alexander",
+      "Maria": "Maria",
+      "Dmitry": "Dmitry",
+      "Anna": "Anna",
+      "Ivan": "Ivan",
+      "Catherine": "Catherine",
+      "Sergei": "Sergei",
+      "Olga": "Olga",
+      "Andrey": "Andrey",
+      "Natalia": "Natalia"
+    },
+    "blockMembers": "Failed to display the list of participants!",
+    "findProgram": "Find a program",
+    "ourApproachEntry": "about our hike",
+    "ourApproachTitle": "Explore all mountain ranges of the world with us",
+    "ourApproachDesc": "Its roots go back to a fragment of classical Latin from 45 BC, that is, more than two thousand years ago. Richard McClintock, a professor of Latin at Hampden-Sydney College in Virginia, took one of the strangest words in Lorem Ipsum, \"consectetur\", and began searching for it in classical Latin literature.",
+    "tourProgram": "Tour program",
+    "ourOfferEntry": "our offer",
+    "ourOfferTitle": "Best programs for you",
+    "ourOfferDesc": "Its roots go back to a fragment of classical Latin from 45 BC, that is, more than two thousand years ago. Richard McClintock, a professor of Latin at Hampden-Sydney College.",
+    "cards": {
+      "experiencedGuide": {
+        "title": "Experienced guide",
+        "desc": "For the modern world, the basic vector of development implies independent ways to implement the corresponding activation conditions."
+      },
+      "safeTrip": {
+        "title": "Safe trip",
+        "desc": "For the modern world, the basic vector of development implies independent ways to implement the corresponding activation conditions."
+      },
+      "loyalPrices": {
+        "title": "Loyal prices",
+        "desc": "For the modern world, the basic vector of development implies independent ways to implement the corresponding activation conditions."
+      }
+    },
+    "cardPlugging": "Empty, cards were not displayed!",
+    "costPrograms": "Program cost",
+    "feedback": "based on travelers' feedback",
+    "popularDestinations": "Popular destinations",
+    "directions": {
+      "mountainLake": {
+        "title": "Lake near the mountains",
+        "desc": "romantic adventure"
+      },
+      "nightMountains": {
+        "title": "Night in the mountains",
+        "desc": "in the company of friends"
+      },
+      "mountainExercise": {
+        "title": "Workout in the mountains",
+        "desc": "for those who care about themselves"
+      }
+    },
+    "referralRating": "Destination rating",
+    "shareImpressionsOne": "share your impressions",
+    "travelBlog": "Travel blog",
+    "articles": {
+      "italy": {
+        "title": "Beautiful Italy, what is it really like?",
+        "desc": "For the modern world, the basic vector of development implies independent ways to implement the corresponding activation conditions."
+      },
+      "flightDawn": {
+        "title": "No more doubts! The whole world is open to you!",
+        "desc": "For the modern world, the basic vector of development implies independent ways to implement the corresponding conditions for activation ... independent ways to implement the corresponding activation conditions ... For the modern world, the basic vector of development implies independent ways to implement the corresponding activation conditions ... independent ways to implement the corresponding activation conditions ..."
+      },
+      "roadTrip": {
+        "title": "How to prepare for a solo trip?",
+        "desc": "For the modern world, the basic vector of development implies."
+      },
+      "tajMahal": {
+        "title": "India ... are we flying?",
+        "desc": "For the modern world, the basics."
+      }
+    },
+    "infoArticle": "read article",
+    "otherMaterial": "Other materials",
+    "photoReport": "photo report",
+    "shareImpressionsTwo": "We share impressions",
+    "shareImpressions": "Our Pinterest",
+    "alts": {
+      "mountainPeak": "mountain peak",
+      "alpineMeadowHouse": "wooden house in alpine meadow",
+      "playButton": "play button",
+      "tropicalLook": "tropical view",
+      "volcanicCrater": "volcanic crater",
+      "snowyMountains": "snowy mountains",
+      "orangeMineralRiver": "mineral waters",
+      "cappadociaAtDawn": "view 1",
+      "travelersGear": "view 2",
+      "burjAlArab": "view 3",
+      "tropicalSpecies": "view 4",
+      "grandCanyon": "view 5",
+      "travelerNote": "view 6"
+    },
+    "findProgramMessage": "Tour program found",
+    "tourProgramMessage": "Tour program opened",
+    "otherMaterialMessage": "Other materials loaded"
+  },
+  "usersPage": {
+    "title": "Users List",
+    "empty": "No users to display",
+    "userAdded": "User added",
+    "searchLabel": "Search user:",
+    "searchPlaceholder": "For example: Alex...",
+    "userPlural": {
+      "one": "User",
+      "few": "Users",
+      "many": "Users"
+    },
+    "createUser": {
+      "title": "Create user",
+      "name": "Name *",
+      "namePlaceholder": "Enter name (2-100 characters)",
+      "username": "Username *",
+      "usernamePlaceholder": "Enter username (3-30 characters)",
+      "contacts": "Contacts",
+      "email": "Email *",
+      "phone": "Phone *",
+      "phonePlaceholder": "Enter phone number (10-25 characters)",
+      "website": "Website",
+      "address": "Residential address",
+      "city": "City *",
+      "cityPlaceholder": "Enter city (max. 50)",
+      "street": "Street *",
+      "streetPlaceholder": "Enter street (max. 100)",
+      "suite": "Office",
+      "suitePlaceholder": "Enter office (max. 50)",
+      "zipcode": "Zip code *",
+      "zipcodePlaceholder": "Postal code (5-10)",
+      "lat": "Latitude *",
+      "latPlaceholder": "From 30 to 90",
+      "lng": "Longitude *",
+      "lngPlaceholder": "From 60 to 180",
+      "company": "Company",
+      "companyName": "Name *",
+      "companyNamePlaceholder": "Company name (max. 50)",
+      "catchphrase": "Tagline",
+      "catchphrasePlaceholder": "Company tagline (max. 200)",
+      "bs": "Service",
+      "bsPlaceholder": "Service type (max. 100)",
+      "emailPlaceholder": "example@email.com",
+      "websitePlaceholder": "example.com",
+      "submit": "Create user",
+      "invalid": "Form is invalid"
+    },
+    "userCard": {
+      "contacts": "Contacts",
+      "email": "Email:",
+      "phone": "Phone:",
+      "website": "Website:",
+      "address": "Residential address",
+      "city": "City:",
+      "street": "Street:",
+      "suite": "Office:",
+      "zipcode": "ZIP code:",
+      "coordinates": "Coordinates:",
+      "workplace": "Workplace",
+      "company": "Company:",
+      "mission": "Mission:",
+      "specialization": "Specialization:",
+      "deleteUser": "Delete user",
+      "unknown": "Unknown"
+    }
+  },
+  "postsPage": {
+    "title": "Posts table",
+    "createPost": "Create post",
+    "table": {
+      "title": "Title",
+      "tags": "Tags",
+      "views": "Views",
+      "pageReport": "Showing {first} to {last} of {totalRecords} entries",
+      "empty": "Empty"
+    },
+    "menu": {
+      "view": "View",
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "messages": {
+      "loaded": "Posts loaded",
+      "pageChanged": "Page changed",
+      "selected": "Post selected",
+      "deleted": "Post deleted",
+      "created": "New post created",
+      "updated": "Post updated",
+      "loadError": "Error while loading: {{ error }}",
+      "pageError": "Error while changing page: {{ error }}",
+      "deleteError": "Error while deleting: {{ error }}",
+      "createError": "Error while creating: {{ error }}",
+      "editError": "Error while editing: {{ error }}",
+      "invalid": "Form is invalid - post not created"
+    },
+    "create": {
+      "newPost": "New post",
+      "createEntry": "Create entry",
+      "title": "Title*",
+      "titlePlaceholder": "Enter title...",
+      "body": "Text*",
+      "bodyPlaceholder": "Enter post text...",
+      "tags": "Tags*",
+      "tagsHint": "comma separated",
+      "tagsPlaceholder": "history, crime, american",
+      "likes": "Likes*",
+      "dislikes": "Dislikes*",
+      "views": "Views*",
+      "author": "Author*",
+      "back": "Back to table",
+      "save": "Save"
+    },
+    "detail": {
+      "likes": "Likes",
+      "views": "Views",
+      "author": "Author",
+      "back": "Back to table"
+    },
+    "editDialog": {
+      "prompt": "Please update the post information.",
+      "title": "Title",
+      "tags": "Tags",
+      "views": "Views",
+      "cancel": "Cancel",
+      "save": "Save",
+      "header": "Post list"
+    }
+  },
+  "footer": {
+    "companyName": "IT-Simulator | Rumtibet",
+    "desc": "Its roots go back to a fragment of classical Latin from 45 BC, that is, more than two thousand years ago. Richard McClintock, a professor of Latin at Hampden-Sydney College.",
+    "relevant": "relevant",
+    "mailings": "Receive useful travel mailings",
+    "email": "Enter your e-mail address",
+    "btnNewsSubs": "Subscribe to news",
+    "disklayerText": "By subscribing to the news, you automatically agree to",
+    "disklayerLinkOne": "the terms of personal data processing and",
+    "disklayerLinkTwo": "the rules of advertising mailings",
+    "ourServices": "Our services",
+    "importantForTravel": "Important for travel",
+    "article": {
+      "summerMountainHikes": "Summer mountain hikes",
+      "winterMountainHikes": "Winter mountain hikes",
+      "visitingMountainTemples": "Visiting mountain temples",
+      "extremeTourism": "Extreme tourism",
+      "hikingAmazonJungle": "Hiking in the Amazon jungle",
+      "tripAfrica": "Trip to Africa"
+    },
+    "favor": {
+      "howToPack": "How to pack for a long hike?",
+      "vitalSupplies": "Vital hiking supplies",
+      "medicalInsurance": "Medical insurance, safety guarantees",
+      "forDoctors": "If you're a doctor, check here"
+    },
+    "stubArticle": "Articles are empty!",
+    "servicePlug": "Services are empty!",
+    "copyrightText": "IP Konstantinopolsky K.K., 2023",
+    "copyrightLink": "Personal data processing policy",
+    "emailPlaceholder": "name@domain.com",
+    "contactEmail": "info@domain.com",
+    "contactPhone": "+7 (123) 456-78-90",
+    "newsSubscriptionMessage": "You have subscribed to the newsletter"
+  },
+  "message": {
+    "altLetterIcon": "letter icon",
+    "altCloseIcon": "close messages icon"
+  },
+  "notFound": {
+    "title": "Page not found"
+  },
+  "homework": {
+    "changeName": "Change name",
+    "user": "User",
+    "counter": "Counter:",
+    "change1": "Change 1",
+    "change2": "Change 2",
+    "change3": "Change 3",
+    "change4": "Change 4",
+    "change5": "Change 5",
+    "change6": "Change 6"
+  }
+}

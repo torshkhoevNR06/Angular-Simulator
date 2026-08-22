@@ -1,4 +1,4 @@
 export interface INavigation {
-  page: string;
+  key: string;
   path: string;
 }

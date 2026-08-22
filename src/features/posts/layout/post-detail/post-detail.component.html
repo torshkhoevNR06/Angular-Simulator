@@ -6,18 +6,18 @@
   <div class="post__stats">
     <div class="post__stat">
       <span class="post__stat-value">{{ post.reactions.likes }}</span>
-      <span class="post__stat-label">Лайков</span>
+      <span class="post__stat-label">{{ 'postsPage.detail.likes' | translate }}</span>
     </div>
     <div class="post__stat">
       <span class="post__stat-value">{{ post.views }}</span>
-      <span class="post__stat-label">Просмотров</span>
+      <span class="post__stat-label">{{ 'postsPage.detail.views' | translate }}</span>
     </div>
     <div class="post__stat">
       <span class="post__stat-value">{{ post.userId }}</span>
-      <span class="post__stat-label">Автор</span>
+      <span class="post__stat-label">{{ 'postsPage.detail.author' | translate }}</span>
     </div>
   </div>
   <div class="post__actions">
-    <a class="post__back-link" [routerLink]="['/posts']">Вернуться к таблице</a>
+    <a class="post__back-link" [routerLink]="['/posts']">{{ 'postsPage.detail.back' | translate }}</a>
   </div>
 </div>

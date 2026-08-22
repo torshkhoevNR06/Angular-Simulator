@@ -26,11 +26,11 @@
   }
 
   .fa-people-group {
-    color: #008000;
+    color: var(--accent-green);
   }
 
   .fa-shield-halved {
-    color: #383899;
+    color: var(--gold-color);
   }
 
   .fa-tag {
@@ -110,7 +110,7 @@
     position: relative;
     padding: 14px 16px;
     height: 52px;
-    border: 1px solid var(--primary-text-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     cursor: pointer;
   }
@@ -134,21 +134,21 @@
     line-height: 50px;
     text-align: center;
     cursor: pointer;
-    background-color: var(--additional-color);
+    background-color: var(--accent-green);
 
     &__disabled {
-      background-color: #333333;
+      background-color: var(--border-color);
       transform: 1s;
     }
 
     &__btn {
-      background-color: var(--additional-color);
-      color: var(--secondary-text-color);
+      background-color: var(--accent-green);
+      color: var(--primary-text-color);
     }
 
     &__disabled-btn {
-      background-color: #333333;
-      color: #918d8d;
+      background-color: var(--border-color);
+      color: var(--text-muted);
       transform: 1s;
     }
   }
@@ -161,12 +161,12 @@
     padding: 0 42px;
     backdrop-filter: blur(5px);
     border-radius: 10px;
-    background-color: #FFFFFF33;
+    background-color: rgba(21, 28, 25, 0.5);
     color: var(--primary-text-color);
   }
 
   .live-input {
-    border: 1px solid var(--primary-text-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     width: 270px;
     padding: 14px 12px;
@@ -277,17 +277,17 @@
 
 .expert-guide__animated-bg:hover {
   transition: .5s;
-  background: #e5eeeb;
+  background: #1B2420;
 }
 
 .safe-passage__animated-bg:hover {
   transition: .5s;
-  background: #e3e6ee;
+  background: #1B2420;
 }
 
 .loyal-prices__animated-bg:hover {
   transition: .5s;
-  background: #f3f1e1;
+  background: #1B2420;
 }
 
 .our-offer__item {
@@ -368,7 +368,7 @@
   gap: 7px;
   width: 65px;
   height: 32px;
-  background-color: #FFFFFF4D;
+  background-color: rgba(21, 28, 25, 0.5);
   cursor: pointer;
 
   &__desc {
@@ -378,7 +378,7 @@
   &__desc {
     font-size: 14px;
     font-weight: 700;
-    color: var(--additional-color);
+    color: var(--primary-text-color);
   }
 }
 
@@ -391,7 +391,7 @@
   width: 380px;
   height: 90px;
   backdrop-filter: blur(2px);
-  background-color: #ebebeb38;
+  background-color: rgba(21, 28, 25, 0.5);
 
   .location__title {
     font-size: 24px;
@@ -409,7 +409,7 @@
 .box-description__price {
   @include mix.flex(center, center, nowrap);
 
-  background-color: #FFFFFF4D;
+  background-color: rgba(21, 28, 25, 0.5);
   width: 86px;
   height: 40px;
   border-radius: 4px;
@@ -451,7 +451,7 @@
   height: 320px;
   padding: 16px;
   border-radius: 10px;
-  box-shadow: 0 0 15px 0 #18121E1F;
+  box-shadow: 0 0 15px 0 rgba(43, 54, 48, 0.12);
   background-color: var(--bg-card);
 }
 
@@ -479,7 +479,7 @@
 
   &-title:hover {
     text-decoration: underline;
-    color: var(--additional-color);
+    color: var(--link-color);
   }
 
   &-desc {
@@ -499,7 +499,7 @@
 
   .info-article {
     cursor: pointer;
-    color: var(--additional-color);
+    color: var(--link-color);
   }
 }
 

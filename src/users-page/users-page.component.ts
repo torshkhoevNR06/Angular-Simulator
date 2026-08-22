@@ -8,22 +8,18 @@ import { UsersFilterComponent } from '../users-filter/users-filter.component';
 import { BehaviorSubject, combineLatest, map, Observable, tap } from 'rxjs';
 import { PluralPipe } from '../pipe/plural.pipe';
 import { IUser } from '../interface/IUser';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-users-page',
-  imports: [
-    AsyncPipe,
-    UserCardComponent,
-    CreateUserComponent,
-    UsersFilterComponent,
-    PluralPipe
-  ],
+  imports: [ AsyncPipe, UserCardComponent, CreateUserComponent, UsersFilterComponent, PluralPipe, TranslatePipe],
   templateUrl: './users-page.component.html',
   styleUrl: './users-page.component.scss'
 })
 export class UsersPageComponent implements OnInit {
 
   private messageService: MessageService = inject(MessageService);
+  private translate: TranslateService = inject(TranslateService);
   userService: UserService = inject(UserService);
 
   private filteredSubject: BehaviorSubject<string> =
@@ -42,22 +38,18 @@ export class UsersPageComponent implements OnInit {
         user.name.trim().toLowerCase().includes(name)
       );
     }),
-    tap((users: IUser[]) =>
-      setTimeout(() => {
-        this.usersCount = users.length;
-      })
-    )
+    tap((users: IUser[]) => setTimeout(() => this.usersCount = users.length))
   );
 
   ngOnInit(): void {
-    this.userService
-      .loadUsers()
-      .pipe(tap((users: IUser[]) => this.userService.setUsers(users)))
-      .subscribe();
+    this.userService.loadUsers()
+      .pipe(
+        tap((users: IUser[]) => this.userService.setUsers(users))
+      ).subscribe();
   }
 
   onAddUser(user: IUser): void {
-    this.messageService.showSuccess('Пользователь добавлен');
+    this.messageService.showSuccess(this.translate.instant('usersPage.userAdded'));
     this.userService.addUser(user);
   }
 

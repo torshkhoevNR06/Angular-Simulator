@@ -1,0 +1,9 @@
+:host::ng-deep {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+
+  .p-togglebutton-checked .p-togglebutton-content  {
+    background-color: var(--p-cyan-900);
+  }
+}

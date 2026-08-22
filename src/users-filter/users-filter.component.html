@@ -1,8 +1,8 @@
-<label for="live-input">Поиск пользователя:</label>
+<label for="live-input">{{ 'usersPage.searchLabel' | translate }}</label>
 <input 
   class="live-input" 
   id="live-input" 
   type="text" 
-  placeholder="Например: Alex..."
+  [placeholder]="'usersPage.searchPlaceholder' | translate"
   [formControl]="filterControl"
 >

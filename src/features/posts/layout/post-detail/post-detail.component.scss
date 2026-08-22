@@ -3,29 +3,29 @@
   margin: 40px auto 140px;
   padding: 32px;
   border-radius: 16px;
-  background-color: #12111a;
-  border: 1px solid #2e2b45;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   font-family: 'Segoe UI', sans-serif;
 }
 
 .post__id {
   font-size: 12px;
-  color: #555270;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .post__title {
   font-size: 24px;
   font-weight: 700;
-  color: #b388ff;
+  color: var(--gold-color);
   margin-bottom: 16px;
   line-height: 1.3;
 }
 
 .post__body {
   font-size: 15px;
-  color: #c0bcd6;
+  color: var(--secondary-text-color);
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -33,9 +33,9 @@
 .post__tags {
   display: inline-block;
   font-size: 12px;
-  color: #b388ff;
-  background: #1e1b30;
-  border: 1px solid #3d3660;
+  color: var(--gold-color);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-color);
   padding: 5px 14px;
   border-radius: 20px;
   margin-bottom: 24px;
@@ -52,15 +52,15 @@
   padding: 16px;
   border-radius: 10px;
   background:
-    linear-gradient(180deg, rgba(179, 136, 255, 0.12), rgba(179, 136, 255, 0.04)),
-    #171522;
-  border: 1px solid #312c4a;
+    linear-gradient(180deg, rgba(214, 181, 109, 0.12), rgba(214, 181, 109, 0.04)),
+    var(--bg-page);
+  border: 1px solid var(--border-color);
 }
 
 .post__stat-value {
   display: block;
   margin-bottom: 6px;
-  color: #ffffff;
+  color: var(--primary-text-color);
   font-size: 22px;
   font-weight: 700;
   line-height: 1;
@@ -68,7 +68,7 @@
 
 .post__stat-label {
   display: block;
-  color: #9c96ba;
+  color: var(--secondary-text-color);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
@@ -80,7 +80,7 @@
   justify-content: flex-start;
   margin-top: 28px;
   padding-top: 22px;
-  border-top: 1px solid #2e2b45;
+  border-top: 1px solid var(--border-color);
 }
 
 .post__back-link {
@@ -89,9 +89,9 @@
   min-height: 40px;
   padding: 0 18px;
   border-radius: 8px;
-  background-color: #231f36;
-  border: 1px solid #4a3f72;
-  color: #d8c7ff;
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--gold-color);
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -105,14 +105,14 @@
 
 .post__back-link:hover,
 .post__back-link:focus-visible {
-  background-color: #2d2745;
-  border-color: #b388ff;
-  color: #ffffff;
+  background-color: var(--bg-card);
+  border-color: var(--gold-color);
+  color: var(--primary-text-color);
   transform: translateY(-1px);
 }
 
 .post__back-link:focus-visible {
-  outline: 2px solid rgba(179, 136, 255, 0.45);
+  outline: 2px solid rgba(214, 181, 109, 0.45);
   outline-offset: 3px;
 }
 

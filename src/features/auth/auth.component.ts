@@ -6,10 +6,12 @@ import { catchError, finalize, tap, throwError } from 'rxjs';
 import { MessageService } from '../../service/message.service';
 import { LoaderService } from '../../service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Language } from '../../language/language.component';
 
 @Component({
   selector: 'app-auth',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslatePipe, Language],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })
@@ -18,6 +20,7 @@ export class AuthComponent {
   private authService: AuthService = inject(AuthService);
   private messageService: MessageService = inject(MessageService);
   private loaderService: LoaderService = inject(LoaderService);
+  private translate: TranslateService = inject(TranslateService);
 
   private router: Router = inject(Router);
   private fb: FormBuilder = inject(FormBuilder);
@@ -32,20 +35,21 @@ export class AuthComponent {
   onAuthForm(): void {
     if (this.authForm.valid) {
       this.loaderService.showLoader();
-      
-      this.authService.login(this.authForm.value).pipe(
-        tap(() => {
-          this.router.navigate(['']);
-          this.messageService.showInfo('Вы авторизовались');
-        }),
-        catchError((error: HttpErrorResponse) => {
-          this.messageService.showError(`Ошибка ${ error.status }: Вы ввели не верный username`);
-          return throwError(() => error);
-        }),
-        finalize(() => this.loaderService.hideLoader())
-      ).subscribe();
+
+      this.authService.login(this.authForm.value)
+        .pipe(
+          tap(() => {
+            this.router.navigate(['']);
+            this.messageService.showInfo(this.translate.instant('auth.loginSuccess'));
+          }),
+          catchError((error: HttpErrorResponse) => {
+            this.messageService.showError(this.translate.instant('auth.loginError'));
+            return throwError(() => error);
+          }),
+          finalize(() => this.loaderService.hideLoader())
+        ).subscribe();
     } else {
-      this.messageService.showError('Форма не валидна');
+      this.messageService.showError(this.translate.instant('usersPage.createUser.invalid'));
     }
   }
 

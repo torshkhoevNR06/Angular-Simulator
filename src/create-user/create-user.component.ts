@@ -4,17 +4,19 @@ import { MessageService } from '../service/message.service';
 import { AnimatedBorderDirective } from '../directive/animated-border.directive';
 import { FontWeightDirective } from '../directive/font-weight.directive';
 import { IUser } from '../interface/IUser';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-create-user',
-  imports: [ReactiveFormsModule, AnimatedBorderDirective, FontWeightDirective],
+  imports: [ReactiveFormsModule, AnimatedBorderDirective, FontWeightDirective, TranslatePipe],
   templateUrl: './create-user.component.html',
   styleUrl: './create-user.component.scss'
 })
 export class CreateUserComponent {
 
-  @Output() createUser = new EventEmitter<IUser>();  
+  @Output() createUser = new EventEmitter<IUser>();
   private messageService: MessageService = inject(MessageService);
+  private translate: TranslateService = inject(TranslateService);
 
   private fb: FormBuilder = inject(FormBuilder);
   userForm: FormGroup = this.fb.group({
@@ -47,8 +49,8 @@ export class CreateUserComponent {
       this.createUser.emit(this.userForm.value);
       this.userForm.reset();
     } else {
-      this.messageService.showError('Форма не валидна');
-      throw new Error('Проверьте, правильно ли заполнены все поля!');
+      this.messageService.showError(this.translate.instant('usersPage.createUser.invalid'));
+      throw new Error(this.translate.instant('usersPage.createUser.invalid'));
     }
   }
 

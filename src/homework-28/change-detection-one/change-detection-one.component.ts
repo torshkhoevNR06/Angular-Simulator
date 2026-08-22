@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, DoCheck, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-change-detection-one',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './change-detection-one.component.html',
   styleUrl: './change-detection-one.component.scss'
 })

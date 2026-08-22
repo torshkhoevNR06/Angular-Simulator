@@ -7,12 +7,12 @@
 <ng-template #messageTemplate let-message="message">
   <div class="message">
     <div class="message__icons">
-      <img src="/images/letter-icon.svg" alt="иконка письмо">
+      <img src="/images/letter-icon.svg" [alt]="'message.altLetterIcon' | translate">
       <img 
         class="close-button"
         id="close-button"
         src="/images/close-icon.svg" 
-        alt="иконка закрытие сообщений"
+        alt="'message.altCloseIcon' | translate"
         (click)="messageService.closeMessage(message)"
       >
     </div>

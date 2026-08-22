@@ -12,22 +12,34 @@
 }
 
 :root {
-  --primary-text-color: #FDFDFD;
-  --secondary-text-color: #18121E;
+  --primary-text-color: #18112a;
+  --secondary-text-color: #4a4559;
   --additional-color: #1A3E3E;
-  --gold-color: #f2be22;
+  --gold-color: #d4a823;
   --bg-container: #f3f5f4;
-  --bg-card: #f3f5f4;
-  --bg-button: #fdfdfd;
-  --bg-icon: #f2be22;
+  --bg-card: #ffffff;
+  --bg-button: #1A3E3E;
+  --bg-icon: #d4a823;
 }
 
 .p-dark {
-  --secondary-text-color: #FDFDFD;
-  --bg-icon: #7c19b1;
-  --bg-container: #18121E;
-  --bg-card: #27272a;
-  --bg-button: #27272a;
+  --primary-text-color: #F3F0E8;
+  --secondary-text-color: #C8C2B5;
+  --additional-color: #2B3630;
+  --gold-color: #D6B56D;
+  --bg-container: #151C19;
+  --bg-card: #1B2420;
+  --bg-button: #D6B56D;
+  --bg-icon: #D6B56D;
+  --text-muted: #8F988F;
+  --link-color: #8FC7A3;
+  --link-hover: #B6DDBF;
+  --btn-text: #171A16;
+  --btn-hover: #E2C782;
+  --border-color: #2B3630;
+  --accent-green: #5F8F72;
+  --surface-elevated: #1B2420;
+  --bg-page: #0F1412;
 }
 
 .container {
@@ -44,8 +56,8 @@
   font-weight: 700;
   font-size: 16px;
   border-radius: 4px;
-  background-color: var(--additional-color);
-  color: var(--primary-text-color);
+  background-color: var(--bg-button);
+  color: var(--btn-text, var(--primary-text-color));
 }
 
 .entry {
@@ -61,8 +73,8 @@
 
 
 @keyframes rotate {
-to {
-  --angle: 360deg;
+  to {
+    --angle: 360deg;
   }
 }
 

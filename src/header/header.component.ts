@@ -16,45 +16,49 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../features/auth/service/auth.service';
 import { INavigation } from '../interface/INavigation';
 import { IAppConfig } from '../interface/IAppConfig';
+import { LanguageService } from '../service/language.service';
+import { TranslatePipe } from '@ngx-translate/core';
+import { Language } from '../language/language.component';
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe],
+  imports: [ FormsModule, DatePipe, RouterModule, FontAwesomeModule, ToggleSwitchModule, ButtonModule, SelectButtonModule, AsyncPipe, TranslatePipe, Language],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  
+
   private localStorageService: LocalStorageService = inject(LocalStorageService);
   messageService: MessageService = inject(MessageService);
   themeService: ThemeService = inject(ThemeService);
   authService: AuthService = inject(AuthService);
-  
+  languageService: LanguageService = inject(LanguageService);
+
   isDarkMode$: Observable<boolean> = this.themeService.isDarkMode$;
   theme$: Observable<Theme> = this.themeService.theme$;
-  
+
   APP_CONFIG: IAppConfig = this.themeService.APP_CONFIG;
   DATE_PIPE_DEFAULT_OPTIONS: DatePipeConfig = inject(DATE_PIPE_DEFAULT_OPTIONS);
-  
+
   currentTask!: 'counter' | 'dateTime';
   companyName: string = 'Румтибет';
   dateTime!: Date;
   counter: number = 0;
-  
+
   faMoon: IconDefinition = faMoon;
   faSun: IconDefinition = faSun;
   faRightFromBracket: IconDefinition = faRightFromBracket;
 
   pages: INavigation[] = [
-    { page: 'Главная', path: '' },
-    { page: 'Пользователи', path: 'users' },
-    { page: 'Посты', path: 'posts' }
+    { key: 'header.pages.home', path: '' },
+    { key: 'header.pages.users', path: 'users' },
+    { key: 'header.pages.posts', path: 'posts' }
   ];
 
   constructor() {
     this.saveVisitsCount();
     this.saveLastVisit();
-    
+
     const saveCounter: number = this.localStorageService.getItem('counter')!;
     if (saveCounter) {
       this.counter = saveCounter;
@@ -77,7 +81,7 @@ export class HeaderComponent {
     this.counter++;
     localStorage.setItem('counter', JSON.stringify(this.counter));
   }
-  
+
   decrementCounter(): void {
     this.counter--;
     localStorage.setItem('counter', JSON.stringify(this.counter));
@@ -85,6 +89,12 @@ export class HeaderComponent {
 
   setCurrentTask(task: 'counter' | 'dateTime'): void {
     this.currentTask = task;
+  }
+
+  onConsultation(): void {
+    this.messageService.showSuccess(
+      this.languageService.translateService.instant('header.consultationMessage')
+    );
   }
 
   private saveLastVisit(): void {

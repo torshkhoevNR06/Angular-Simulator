@@ -36,8 +36,8 @@
 }
 
 .change-detection-panel .btn {
-  background: #7c5cff;
-  color: #fff;
+  background: var(--gold-color);
+  color: var(--btn-text, #fff);
   padding: 8px 12px;
   border-radius: 8px;
   border: none;
@@ -46,6 +46,6 @@
 }
 
 .change-detection-panel .btn:hover {
-  background: #5b3cff;
+  background: var(--btn-hover);
   transform: translateY(-1px);
 }

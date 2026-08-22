@@ -16,6 +16,8 @@ import { firstValueFrom } from 'rxjs';
 import { IAppConfig } from '../interface/IAppConfig';
 import { APP_CONFIG } from '../app-config.token';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 const getSavedTheme = (appConfigValue: IAppConfig): PresetVariants => {
   let savedTheme: Theme = localStorage.getItem('theme') as Theme ?? Theme.AURA;
@@ -39,10 +41,10 @@ const getSavedTheme = (appConfigValue: IAppConfig): PresetVariants => {
 };
 
 const appConfigValue: IAppConfig = {
-  companyName: 'IT-Simulator | Румтибет',
+  companyName: 'header.companyName',
   enableLogs: false,
-  enableNotifications: false,
-  enableTheming: false,
+  enableNotifications: true,
+  enableTheming: true,
   sessionTimeout: 40
 };
 
@@ -53,6 +55,14 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(withInterceptors([authInterceptor, loggingInterceptor, errorInterceptor])),
     provideZoneChangeDetection(),
+    provideTranslateService({
+      loader: provideTranslateHttpLoader({
+        prefix: '/i18n/',
+        suffix: '.json'
+      }),
+      fallbackLang: 'ru',
+      lang: `${ localStorage.getItem('language') || 'ru' }`
+    }),
     {
       provide: APP_CONFIG,
       useValue: appConfigValue

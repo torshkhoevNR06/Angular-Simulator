@@ -11,10 +11,11 @@ import { LoaderService } from '../../../../service/loader.service';
 import { catchError, tap, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { PostService } from '../../service/post.service';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-post-edit-dialog',
-  imports: [ReactiveFormsModule, ButtonModule, ToastModule, DialogModule, DynamicDialogModule, InputTextModule],
+  imports: [ ReactiveFormsModule, ButtonModule, ToastModule, DialogModule, DynamicDialogModule, InputTextModule, TranslatePipe],
   templateUrl: './post-edit-dialog.component.html'
 })
 export class PostEditDialogComponent {
@@ -22,7 +23,8 @@ export class PostEditDialogComponent {
   private postService: PostService = inject(PostService);
   private loaderService = inject(LoaderService);
   private messageService: MessageService = inject(MessageService);
-    
+  private translate: TranslateService = inject(TranslateService);
+
   private dynamicDialogConfig: DynamicDialogConfig<IPost> = inject(DynamicDialogConfig);
   private ref: DynamicDialogRef | null = inject(DynamicDialogRef);
 
@@ -36,25 +38,30 @@ export class PostEditDialogComponent {
   });
 
   onEditPost(): void {
-    const tags: string[] = this.editPostForm.get('tags')!.value
-      .split(',').map((str: string) => str.trim())
+    const tags: string[] = this.editPostForm
+      .get('tags')!
+      .value.split(',')
+      .map((str: string) => str.trim())
       .filter((str: string) => str !== '');
 
     if (this.editPostForm.valid) {
       this.loaderService.showLoader();
-      this.postService.editPost(this.postId, { ...this.editPostForm.value, tags: tags }).pipe(
-        tap(() => {
-          this.loaderService.hideLoader();
-          this.closeModal();
-          this.messageService.showInfo('Пост изменён');
-        }),
-        catchError((error: HttpErrorResponse) => {
-          this.messageService.showError(`Ошибка при изменений: ${ error }`);
-          return throwError(() => error);
-        })
-      ).subscribe();
+      this.postService
+        .editPost(this.postId, { ...this.editPostForm.value, tags: tags })
+        .pipe(
+          tap(() => {
+            this.loaderService.hideLoader();
+            this.closeModal();
+            this.messageService.showInfo(this.translate.instant('postsPage.messages.updated'));
+          }),
+          catchError((error: HttpErrorResponse) => {
+            this.messageService.showError(this.translate.instant('postsPage.messages.editError', { error }));
+            return throwError(() => error);
+          })
+        )
+        .subscribe();
     } else {
-      this.messageService.showError('Форма не валидна');
+      this.messageService.showError(this.translate.instant('postsPage.messages.invalid'));
     }
   }
 

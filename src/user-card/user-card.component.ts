@@ -5,15 +5,11 @@ import { PhoneMode } from '../enum/PhoneMode';
 import { FontWeightDirective } from '../directive/font-weight.directive';
 import { AnimatedBorderDirective } from '../directive/animated-border.directive';
 import { IUser } from '../interface/IUser';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-card',
-  imports: [
-    UpperCasePipe,
-    PhoneNumberFormatting,
-    FontWeightDirective,
-    AnimatedBorderDirective
-  ],
+  imports: [ UpperCasePipe, PhoneNumberFormatting, FontWeightDirective, AnimatedBorderDirective, TranslatePipe],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.scss'
 })

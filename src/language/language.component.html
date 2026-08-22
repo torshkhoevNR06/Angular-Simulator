@@ -1,0 +1,10 @@
+<div class="card flex justify-center">
+  <p-selectbutton 
+    [options]="languageService.languages" 
+    [ngModel]="languageService.language$ | async" 
+    optionLabel="name" 
+    optionValue="value"   
+    aria-labelledby="basic"
+    (onChange)="languageService.changeLanguage($event.value)" 
+  />
+</div>

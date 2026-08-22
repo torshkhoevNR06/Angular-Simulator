@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-change-detection-two',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './change-detection-two.component.html',
   styleUrl: './change-detection-two.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

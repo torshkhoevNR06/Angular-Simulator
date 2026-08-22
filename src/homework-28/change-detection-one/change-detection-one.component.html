@@ -1,14 +1,14 @@
 <div class="hw-panel change-detection-panel">
   <div class="status">
-    <div class="count">Счётчик: <span class="value">{{ count }}</span></div>
+    <div class="count">{{ 'homework.counter' | translate }} <span class="value">{{ count }}</span></div>
   </div>
 
   <div class="controls">
-    <button class="btn" (click)="eventClick()">Изменить 1</button>
-    <button class="btn" (click)="setTimeout()">Изменить 2</button>
-    <button class="btn" (click)="promise()">Изменить 3</button>
-    <button class="btn" (click)="HTTP()">Изменить 4</button>
-    <button class="btn" (click)="setInterval()">Изменить 5</button>
-    <button class="btn" (click)="multiEvent()">Изменить 6</button>
+    <button class="btn" (click)="eventClick()">{{ 'homework.change1' | translate }}</button>
+    <button class="btn" (click)="setTimeout()">{{ 'homework.change2' | translate }}</button>
+    <button class="btn" (click)="promise()">{{ 'homework.change3' | translate }}</button>
+    <button class="btn" (click)="HTTP()">{{ 'homework.change4' | translate }}</button>
+    <button class="btn" (click)="setInterval()">{{ 'homework.change5' | translate }}</button>
+    <button class="btn" (click)="multiEvent()">{{ 'homework.change6' | translate }}</button>
   </div>
 </div>

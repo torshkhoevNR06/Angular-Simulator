@@ -1,0 +1,329 @@
+{
+  "auth": {
+    "login": "Avtorizatsiya",
+    "loginAccount": "Hisobga kirish",
+    "userName": "Foydalanuvchi nomi",
+    "userPassword": "Parol",
+    "authInputUserName": "Foydalanuvchi nomini kiriting",
+    "authInputPassword": "Parolni kiriting",
+    "btnLogin": "Kirish",
+    "loginSuccess": "Siz tizimga kirdingiz",
+    "loginError": "Xato {{ status }}: Siz noto'g'ri username kiritdingiz",
+    "mentoringName": "IT-Simulyator",
+    "title": "Maqolalar, foydalanuvchilar va kontentni bir joyda boshqaring",
+    "desc": "Qoramtir interfeys, tezkor navigatsiya va ma'lumotlar bilan ishlashning tanish strukturasi."
+  },
+  "header": {
+    "companyName": "IT-Simulyator | Rumtibet",
+    "pages": {
+      "home": "Bosh sahifa",
+      "users": "Foydalanuvchilar",
+      "posts": "Maqolalar"
+    },
+    "themes": {
+      "nora": "Nora",
+      "aura": "Aura",
+      "lara": "Lara"
+    },
+    "navStub": "Navigatsiya bo'sh!",
+    "btnConsultation": "Konsultatsiya",
+    "btnShowDate": "Sanani ko'rsatish",
+    "showClicker": "Clickerni ko'rsatish",
+    "logoAlt": "Rumtibet kompaniyalari logotipi",
+    "consultationMessage": "Ariza uchun tashakkur! Siz bilan bog'lanamiz.",
+    "logout": "Chiqish"
+  },
+  "main": {
+    "heading": "O'zingizga yaqin odamlar bilan tog' yurishidan zavqlaning",
+    "locationTour": "Tur uchun manzil",
+    "locations": {
+      "iceland": "Islandiya",
+      "novosibirsk": "Novosibirsk",
+      "costaRica": "Kosta-Rika"
+    },
+    "blockLocations": "Joylar ro'yxatini ko'rsatib bo'lmadi!",
+    "selectionList": "ro'yxatdan tanlang",
+    "date": "kk.oo.yyyy",
+    "specifyRange": "davrni belgilang",
+    "selectedParticipants": "{{ selectedParticipants }}",
+    "members": "Ishtirokchilar",
+    "participants": {
+      "Alexander": "Aleksandr",
+      "Maria": "Mariya",
+      "Dmitry": "Dmitriy",
+      "Anna": "Anna",
+      "Ivan": "Ivan",
+      "Catherine": "Katerina",
+      "Sergei": "Sergey",
+      "Olga": "Olga",
+      "Andrey": "Andrey",
+      "Natalia": "Natalya"
+    },
+    "blockMembers": "Ishtirokchilar ro'yxatini ko'rsatib bo'lmadi!",
+    "findProgram": "Dastur topish",
+    "ourApproachEntry": "bizning sayohatimiz haqida",
+    "ourApproachTitle": "Dunyoning barcha tog' tizmlarini biz bilan kashf eting",
+    "ourApproachDesc": "Uning ildizlari eramizdan avvalgi 45-yilning klassik lotincha parchasi bilan bogʻliq, yaʼni ikki ming yildan ortiq vaqt oldinga boradi. Richard MakKlintok, Virjiniya shtatidagi Hampden-Sydney kollejining lotin tili professori, Lorem Ipsumdagi eng g'alati so'zlardan biri bo'lgan \"consectetur\" so'zini olib, uni klassik lotin adabiyotida qidira boshladi.",
+    "tourProgram": "Tur dasturi",
+    "ourOfferEntry": "bizning taklifimiz",
+    "ourOfferTitle": "Siz uchun eng yaxshi dasturlar",
+    "ourOfferDesc": "Uning ildizlari eramizdan avvalgi 45-yilning klassik lotincha parchasi bilan bogʻliq, yaʼni ikki ming yildan ortiq vaqt oldinga boradi. Richard MakKlintok, Hampden-Sydney kollejining lotin tili professori.",
+    "cards": {
+      "experiencedGuide": {
+        "title": "Tajriba gid",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi."
+      },
+      "safeTrip": {
+        "title": "Xavfsiz sayohat",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi."
+      },
+      "loyalPrices": {
+        "title": "Sodiq narxlar",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi."
+      }
+    },
+    "cardPlugging": "Bo'sh, kartalar ko'rsatilmagan!",
+    "costPrograms": "Dastur narxi",
+    "feedback": "sayohatchilar fikri bo'yicha",
+    "popularDestinations": "Mashhur yo'nalishlar",
+    "directions": {
+      "mountainLake": {
+        "title": "Tog' yaqinidagi ko'l",
+        "desc": "romantik sarguzasht"
+      },
+      "nightMountains": {
+        "title": "Tog'lardagi tun",
+        "desc": "do'stlar bilan"
+      },
+      "mountainExercise": {
+        "title": "Tog'lardagi mashq",
+        "desc": "o'zingizga g'amxo'rlik qilayotganlar uchun"
+      }
+    },
+    "referralRating": "Yo'nalishlar reytingi",
+    "shareImpressionsOne": "hisobotlarni baham ko'ramiz",
+    "travelBlog": "Sayohatlar bloki",
+    "articles": {
+      "italy": {
+        "title": "Chiroyli Italiya, u haqiqatan ham shundaymi?",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi."
+      },
+      "flightDawn": {
+        "title": "Shubhalarni tashlang! Butun dunyo siz uchun ochiq!",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi ... mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi ... Zamonaviy dunyo uchun rivojlanishning bazaviy vektori mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi ... mos aktivizatsiya shartlarini mustaqil amalga oshirish usullarini nazarda tutadi ..."
+      },
+      "roadTrip": {
+        "title": "Yolg'iz sayohatga qanday tayyorgarlik ko'rish kerak?",
+        "desc": "Zamonaviy dunyo uchun rivojlanishning bazaviy vektori nazarda tutiladi."
+      },
+      "tajMahal": {
+        "title": "Hindiston ... uchamizmi?",
+        "desc": "Zamonaviy dunyo uchun asosiy narsalar."
+      }
+    },
+    "infoArticle": "maqolani o'qish",
+    "otherMaterial": "Boshqa materiallar",
+    "photoReport": "fotohisobot",
+    "shareImpressionsTwo": "Hisobotlarni baham ko'ramiz",
+    "shareImpressions": "Bizning Pinterest",
+    "alts": {
+      "mountainPeak": "tog' cho'qqisi",
+      "alpineMeadowHouse": "alp mevodagi yog'och uy",
+      "playButton": "plei tugmasi",
+      "tropicalLook": "tropik manzara",
+      "volcanicCrater": "vulkanik krater",
+      "snowyMountains": "qorli tog'lar",
+      "orangeMineralRiver": "mineral suvlari",
+      "cappadociaAtDawn": "ko'rinish 1",
+      "travelersGear": "ko'rinish 2",
+      "burjAlArab": "ko'rinish 3",
+      "tropicalSpecies": "ko'rinish 4",
+      "grandCanyon": "ko'rinish 5",
+      "travelerNote": "ko'rinish 6"
+    },
+    "findProgramMessage": "Tur dasturi topildi",
+    "tourProgramMessage": "Tur dasturi ochildi",
+    "otherMaterialMessage": "Boshqa materiallar yuklandi"
+  },
+  "usersPage": {
+    "title": "Foydalanuvchilar ro'yxati",
+    "empty": "Ko'rsatiladigan foydalanuvchilar yo'q",
+    "userAdded": "Foydalanuvchi qo'shildi",
+    "searchLabel": "Foydalanuvchini qidiring:",
+    "searchPlaceholder": "Masalan: Alex...",
+    "userPlural": {
+      "one": "Foydalanuvchi",
+      "few": "Foydalanuvchi",
+      "many": "Foydalanuvchi"
+    },
+    "createUser": {
+      "title": "Foydalanuvchi yaratish",
+      "name": "Ism *",
+      "namePlaceholder": "Ismni kiriting (2-100 ta belgi)",
+      "username": "Foydalanuvchi nomi *",
+      "usernamePlaceholder": "Foydalanuvchi nomini kiriting (3-30 ta belgi)",
+      "contacts": "Kontaktlar",
+      "email": "Elektron pochta *",
+      "phone": "Telefon *",
+      "phonePlaceholder": "Telefon raqamini kiriting (10-25 ta belgi)",
+      "website": "Veb-sayt",
+      "address": "Yashash manzili",
+      "city": "Shahar *",
+      "cityPlaceholder": "Shaharni kiriting (maks. 50)",
+      "street": "Ko'cha *",
+      "streetPlaceholder": "Ko'chani kiriting (maks. 100)",
+      "suite": "Ofis",
+      "suitePlaceholder": "Ofisni kiriting (maks. 50)",
+      "zipcode": "Indeks *",
+      "zipcodePlaceholder": "Pochta indeksi (5-10)",
+      "lat": "Kenglik *",
+      "latPlaceholder": "30 dan 90 gacha",
+      "lng": "Uzunlik *",
+      "lngPlaceholder": "60 dan 180 gacha",
+      "company": "Kompaniya",
+      "companyName": "Nomi *",
+      "companyNamePlaceholder": "Kompaniya nomi (maks. 50)",
+      "catchphrase": "Slagani",
+      "catchphrasePlaceholder": "Kompaniya slaganasi (maks. 200)",
+      "bs": "Xizmat",
+      "bsPlaceholder": "Xizmat turi (maks. 100)",
+      "emailPlaceholder": "example@email.com",
+      "websitePlaceholder": "example.com",
+      "submit": "Foydalanuvchi yaratish",
+      "invalid": "Forma yaroqsiz"
+    },
+    "userCard": {
+      "contacts": "Kontaktlar",
+      "email": "Elektron pochta:",
+      "phone": "Telefon:",
+      "website": "Veb-sayt:",
+      "address": "Yashash manzili",
+      "city": "Shahar:",
+      "street": "Ko'cha:",
+      "suite": "Ofis:",
+      "zipcode": "Indeks:",
+      "coordinates": "Koordinatalar:",
+      "workplace": "Ish joyi",
+      "company": "Kompaniya:",
+      "mission": "Missiya:",
+      "specialization": "Mutaxassislik:",
+      "deleteUser": "Foydalanuvchini o'chirish",
+      "unknown": "Noma'lum"
+    }
+  },
+  "postsPage": {
+    "title": "Postlar jadvali",
+    "createPost": "Post yaratish",
+    "table": {
+      "title": "Sarlavha",
+      "tags": "Teglar",
+      "views": "Ko'rishlar",
+      "pageReport": "{first} dan {last} gacha {totalRecords} dan ko'rsatilmoqda",
+      "empty": "Bo'sh"
+    },
+    "menu": {
+      "view": "Ko'rish",
+      "delete": "O'chirish",
+      "edit": "Tahrirlash"
+    },
+    "messages": {
+      "loaded": "Postlar yuklandi",
+      "pageChanged": "Sahifa o'zgardi",
+      "selected": "Post tanlandi",
+      "deleted": "Post o'chirildi",
+      "created": "Yangi post yaratildi",
+      "updated": "Post yangilandi",
+      "loadError": "Yuklashda xatolik: {{ error }}",
+      "pageError": "Sahifa almashtirishda xatolik: {{ error }}",
+      "deleteError": "O'chirishda xatolik: {{ error }}",
+      "createError": "Yaratishda xatolik: {{ error }}",
+      "editError": "Tahrirlashda xatolik: {{ error }}",
+      "invalid": "Forma yaroqsiz - post yaratilmadi"
+    },
+    "create": {
+      "newPost": "Yangi post",
+      "createEntry": "Yozuv yaratish",
+      "title": "Sarlavha*",
+      "titlePlaceholder": "Sarlavhani kiriting...",
+      "body": "Matn*",
+      "bodyPlaceholder": "Post matnini kiriting...",
+      "tags": "Teglar*",
+      "tagsHint": "vergul bilan",
+      "tagsPlaceholder": "history, crime, american",
+      "likes": "Layklar*",
+      "dislikes": "Dislayklar*",
+      "views": "Ko'rishlar*",
+      "author": "Muallif*",
+      "back": "Jadvalga qaytish",
+      "save": "Saqlash"
+    },
+    "detail": {
+      "likes": "Layklar",
+      "views": "Ko'rishlar",
+      "author": "Muallif",
+      "back": "Jadvalga qaytish"
+    },
+    "editDialog": {
+      "prompt": "Iltimos, post ma'lumotlarini yangilang.",
+      "title": "Sarlavha",
+      "tags": "Teglar",
+      "views": "Ko'rishlar",
+      "cancel": "Bekor qilish",
+      "save": "Saqlash",
+      "header": "Postlar ro'yxati"
+    }
+  },
+  "footer": {
+    "companyName": "IT-Simulator | Rumtibet",
+    "desc": "Uning ildizlari eramizdan avvalgi 45-yilning klassik lotincha parchasi bilan bogʻliq, yaʼni ikki ming yildan ortiq vaqt oldinga boradi. Richard MakKlintok, Hampden-Sydney kollejining lotin tili professori.",
+    "relevant": "dolzarb",
+    "mailings": "Sayohatlar haqida foydali xabarnomalarni oling",
+    "email": "E-pochta manzilini kiriting",
+    "btnNewsSubs": "Yangiliklarga obuna bo'lish",
+    "disklayerText": "Yangiliklarga obuna bo'lib, siz avtomatik ravishda rozisiz",
+    "disklayerLinkOne": "shaxsiy ma'lumotlarni qayta ishlash shartlariga va",
+    "disklayerLinkTwo": "reklama xabarnomalari qoidalariga",
+    "ourServices": "Bizning xizmatlarimiz",
+    "importantForTravel": "Sayohatlar uchun muhim",
+    "article": {
+      "summerMountainHikes": "Yozgi tog' yurishlari",
+      "winterMountainHikes": "Qishki tog' sayohatlari",
+      "visitingMountainTemples": "Tog'lardagi ma'badlarni ziyorat qilish",
+      "extremeTourism": "Ekstremal turizm turlari",
+      "hikingAmazonJungle": "Amazon o'rmonlariga sayohatlar",
+      "tripAfrica": "Afrikaga sayohat"
+    },
+    "favor": {
+      "howToPack": "Uzoq sayohatga qanday yig'ish kerak?",
+      "vitalSupplies": "Sayohat uchun zarur buyumlar",
+      "medicalInsurance": "Tibbiy sug'urta, xavfsizlik kafolatlari",
+      "forDoctors": "Agar siz shifokor bo'lsangiz - shu yerga nazar soling"
+    },
+    "stubArticle": "Maqolalar bo'sh!",
+    "servicePlug": "Xizmatlar bo'sh!",
+    "copyrightText": "IP Konstantinopolsky K.K., 2023",
+    "copyrightLink": "Shaxsiy ma'lumotlarni qayta ishlash siyosati",
+    "emailPlaceholder": "name@domain.com",
+    "contactEmail": "info@domain.com",
+    "contactPhone": "+7 (123) 456-78-90",
+    "newsSubscriptionMessage": "Siz yangiliklarga obuna bo'ldingiz"
+  },
+  "message": {
+    "altLetterIcon": "xat iconasi",
+    "altCloseIcon": "xabarlarni yopish iconasi"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi"
+  },
+  "homework": {
+    "changeName": "Ismni o'zgartirish",
+    "user": "Foydalanuvchi",
+    "counter": "Hisoblagich:",
+    "change1": "O'zgartirish 1",
+    "change2": "O'zgartirish 2",
+    "change3": "O'zgartirish 3",
+    "change4": "O'zgartirish 4",
+    "change5": "O'zgartirish 5",
+    "change6": "O'zgartirish 6"
+  }
+}

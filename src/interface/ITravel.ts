@@ -1,4 +1,4 @@
 export interface ITravel {
   id: number;
-  article: string;
+  key: string;
 }

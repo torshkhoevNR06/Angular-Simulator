@@ -5,11 +5,11 @@ import { catchError, throwError } from 'rxjs';
 
 export const errorInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn) => {
   const messageService: MessageService = inject(MessageService);
-
+  
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       if (error.status >= 500 && error.status <= 599) {
-        messageService.showError(`Server error: ${ error.status }`);
+        messageService.showError(`Ошибка сервера: ${ error.status }`);
       }
       
       return throwError(() => error);

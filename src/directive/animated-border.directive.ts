@@ -5,10 +5,10 @@ import { IGradientConfiguration } from '../interface/IGradientConfiguration';
   selector: '[animatedBorder]'
 })
 export class AnimatedBorderDirective {
-  
-  @Input() gradientConfiguration: IGradientConfiguration = { 
-    delay: 1000, 
-    colors: ['#f2be22', '#7c19b1', '#131219'],
+
+  @Input() gradientConfiguration: IGradientConfiguration = {
+    delay: 1000,
+    colors: ['#f2be22', '#d4a823', '#131219'],
     thickness: '2px'
   };
 
@@ -44,5 +44,5 @@ export class AnimatedBorderDirective {
     this.borderAnimation = '';
     clearTimeout(this.timerId);
   }
-
+  
 }

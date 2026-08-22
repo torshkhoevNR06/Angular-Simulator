@@ -3,10 +3,11 @@ import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
 import { MessageService } from '../service/message.service';
 import { Observable } from 'rxjs';
 import { IMessage } from '../interface/IMessage';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-message',
-  imports: [NgTemplateOutlet, AsyncPipe],
+  imports: [NgTemplateOutlet, AsyncPipe, TranslatePipe],
   templateUrl: './message.component.html',
   styleUrl: './message.component.scss'
 })
