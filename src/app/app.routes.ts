@@ -1,50 +1,51 @@
 import { Routes } from '@angular/router';
 import { postResolver } from '../features/posts/resolver/post.resolver';
-import { authGuard } from '../features/auth/guard/auth.guard';
-import { adminGuard } from '../features/auth/guard/admin.guard';
+import { adminGuard } from '../core/guard/admin.guard';
+import { authGuard } from '../core/guard/auth.guard';
+
 
 export const routes: Routes = [
-  { 
-    path: 'login', 
-    loadComponent: () => import('../features/auth/auth.component').then(c => c.AuthComponent)
+  {
+    path: 'login',
+    loadComponent: () => import('../features/auth/auth.component').then((c) => c.AuthComponent)
   },
   {
     path: '',
-    loadComponent: () => import('../main-layout/main-layout.component').then(c => c.MainLayoutComponent),
+    loadComponent: () => import('../shared/ui/main-layout/main-layout.component').then((c) => c.MainLayoutComponent),
     children: [
-      { 
+      {
         path: '',
-        loadComponent: () => import('../home-page/home-page.component').then(c => c.HomePageComponent)
+        loadComponent: () => import('../features/home-page/home-page.component').then((c) => c.HomePageComponent)
       },
       {
-        path: 'cd', 
+        path: 'cd',
         canActivate: [adminGuard],
-        loadComponent: () => import('../homework-28/parent/parent.component').then(c => c.ParentComponent)
+        loadComponent: () => import('../sandbox/homework-28/components/parent/parent.component').then((c) => c.ParentComponent)
       },
-      { 
-        path: 'users', 
+      {
+        path: 'users',
         canActivate: [adminGuard],
-        loadComponent: () => import('../users-page/users-page.component').then(c => c.UsersPageComponent)
+        loadComponent: () => import('../features/users-page/users-page.component').then((c) => c.UsersPageComponent)
       },
       {
         path: 'posts/create',
         canActivate: [adminGuard],
-        loadComponent: () => import('../features/posts/layout/post-create/post-create.component').then(c => c.PostCreateComponent)
+        loadComponent: () => import('../features/posts/layout/post-create/post-create.component').then((c) => c.PostCreateComponent)
       },
-      { 
-        path: 'posts/:id', 
+      {
+        path: 'posts/:id',
         canActivate: [adminGuard],
-        loadComponent: () => import('../features/posts/layout/post-detail/post-detail.component').then(c => c.PostDetailComponent),
+        loadComponent: () => import('../features/posts/layout/post-detail/post-detail.component').then((c) => c.PostDetailComponent),
         resolve: { post: postResolver }
       },
-      { 
-        path: 'posts', 
+      {
+        path: 'posts',
         canActivate: [adminGuard],
-        loadComponent: () => import('../features/posts/posts.component').then(c => c.PostsComponent)
+        loadComponent: () => import('../features/posts/posts.component').then((c) => c.PostsComponent)
       },
-      { 
-        path: '**', 
-        loadComponent: () => import('../not-found-page/not-found-page.component').then(c => c.NotFoundPageComponent)
+      {
+        path: '**',
+        loadComponent: () => import('../shared/ui/not-found-page/not-found-page.component').then((c) => c.NotFoundPageComponent)
       }
     ],
     canActivate: [authGuard]

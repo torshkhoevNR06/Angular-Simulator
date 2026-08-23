@@ -3,38 +3,38 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { loggingInterceptor } from '../interceptor/logging.interceptor';
-import { errorInterceptor } from '../interceptor/error.interceptor';
-import { PresetVariants } from '../type/PresetVariants';
-import { Theme } from '../enum/Theme';
+import { PresetVariants } from '../core/type/PresetVariants';
+import { Theme } from '../shared/enum/Theme';
 import Nora from '@primeuix/themes/nora';
 import Aura from '@primeuix/themes/aura';
 import Lara from '@primeuix/themes/lara';
-import { authInterceptor } from '../features/auth/interceptor/auth.interceptor';
 import { AuthService } from '../features/auth/service/auth.service';
 import { firstValueFrom } from 'rxjs';
-import { IAppConfig } from '../interface/IAppConfig';
-import { APP_CONFIG } from '../app-config.token';
+import { IAppConfig } from '../shared/interface/IAppConfig';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { APP_CONFIG } from '../shared/token/app-config.token';
+import { errorInterceptor } from '../core/interceptor/error.interceptor';
+import { loggingInterceptor } from '../core/interceptor/logging.interceptor';
+import { authInterceptor } from '../core/interceptor/auth.interceptor';
 
 const getSavedTheme = (appConfigValue: IAppConfig): PresetVariants => {
-  let savedTheme: Theme = localStorage.getItem('theme') as Theme ?? Theme.AURA;
+  let savedTheme: Theme = (localStorage.getItem('theme') as Theme) ?? Theme.AURA;
   const element: HTMLHtmlElement = document.querySelector('html')!;
 
   if (!appConfigValue.enableTheming) {
     element.classList.add('p-dark');
     savedTheme = Theme.AURA;
   }
-  
-  switch(savedTheme) {
+
+  switch (savedTheme) {
   case Theme.NORA:
     return Nora;
-    
+
   case Theme.LARA:
     return Lara;
-    
+
   default:
     return Aura;
   }
@@ -50,10 +50,14 @@ const appConfigValue: IAppConfig = {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAppInitializer(() => firstValueFrom(inject(AuthService).restoreAuthState())),
+    provideAppInitializer(() =>
+      firstValueFrom(inject(AuthService).restoreAuthState())
+    ),
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-    provideHttpClient(withInterceptors([authInterceptor, loggingInterceptor, errorInterceptor])),
+    provideHttpClient(
+      withInterceptors([authInterceptor, loggingInterceptor, errorInterceptor])
+    ),
     provideZoneChangeDetection(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
@@ -67,9 +71,9 @@ export const appConfig: ApplicationConfig = {
       provide: APP_CONFIG,
       useValue: appConfigValue
     },
-    { 
-      provide: DATE_PIPE_DEFAULT_OPTIONS, 
-      useValue: { dateFormat: 'shortDate' } 
+    {
+      provide: DATE_PIPE_DEFAULT_OPTIONS,
+      useValue: { dateFormat: 'shortDate' }
     },
     providePrimeNG({
       theme: {

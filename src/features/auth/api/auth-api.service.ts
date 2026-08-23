@@ -4,14 +4,14 @@ import { Observable } from 'rxjs';
 import { ILogin } from '../interface/ILogin';
 import { IToken } from '../interface/IToken';
 import { IAuthUser } from '../interface/IAuthUser';
-import { APP_CONFIG } from '../../../app-config.token';
-import { IAppConfig } from '../../../interface/IAppConfig';
+import { IAppConfig } from '../../../shared/interface/IAppConfig';
+import { APP_CONFIG } from '../../../shared/token/app-config.token';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthApiService {
-  
+
   private APP_CONFIG: IAppConfig = inject(APP_CONFIG);
   private http: HttpClient = inject(HttpClient);
   private apiUrl: string = 'https://dummyjson.com/auth';

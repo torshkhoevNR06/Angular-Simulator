@@ -6,12 +6,12 @@ import { ToastModule } from 'primeng/toast';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IPost } from '../../interface/IPost';
-import { MessageService } from '../../../../service/message.service';
-import { LoaderService } from '../../../../service/loader.service';
+import { LoaderService } from '../../../../shared/ui/loader/service/loader.service';
 import { catchError, tap, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { PostService } from '../../service/post.service';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { MessageService } from '../../../../shared/ui/message/service/message.service';
 
 @Component({
   selector: 'app-post-edit-dialog',
@@ -19,7 +19,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './post-edit-dialog.component.html'
 })
 export class PostEditDialogComponent {
-
+  
   private postService: PostService = inject(PostService);
   private loaderService = inject(LoaderService);
   private messageService: MessageService = inject(MessageService);
@@ -46,8 +46,7 @@ export class PostEditDialogComponent {
 
     if (this.editPostForm.valid) {
       this.loaderService.showLoader();
-      this.postService
-        .editPost(this.postId, { ...this.editPostForm.value, tags: tags })
+      this.postService.editPost(this.postId, { ...this.editPostForm.value, tags: tags })
         .pipe(
           tap(() => {
             this.loaderService.hideLoader();
@@ -58,8 +57,7 @@ export class PostEditDialogComponent {
             this.messageService.showError(this.translate.instant('postsPage.messages.editError', { error }));
             return throwError(() => error);
           })
-        )
-        .subscribe();
+        ).subscribe();
     } else {
       this.messageService.showError(this.translate.instant('postsPage.messages.invalid'));
     }
