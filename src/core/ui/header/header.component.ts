@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AsyncPipe, DATE_PIPE_DEFAULT_OPTIONS, DatePipe, DatePipeConfig } from '@angular/common';
-import { LocalStorageService } from '../../service/local-storage.service';
-import { ThemeService } from '../../service/theme.service';
-import { Theme } from '../../enum/Theme';
+import { LocalStorageService } from '../../../shared/service/local-storage.service';
+import { ThemeService } from '../../../shared/service/theme.service';
+import { Theme } from '../../../shared/enum/Theme';
 import { faMoon, faRightFromBracket, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
@@ -14,11 +14,11 @@ import { ToggleSwitchModule, ToggleSwitchChangeEvent } from 'primeng/toggleswitc
 import { Observable } from 'rxjs';
 import { AuthService } from '../../../features/auth/service/auth.service';
 import { INavigation } from './interface/INavigation';
-import { IAppConfig } from '../../interface/IAppConfig';
+import { IAppConfig } from '../../../shared/interface/IAppConfig';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Language } from '../language/language.component';
+import { Language } from '../../../shared/ui/language/language.component';
 import { MessageService } from '../message/service/message.service';
-import { LanguageService } from '../language/service/language.service';
+import { LanguageService } from '../../../shared/ui/language/service/language.service';
 
 @Component({
   selector: 'app-header',

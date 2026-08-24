@@ -1,7 +1,7 @@
 import { HttpInterceptorFn, HttpHandlerFn, HttpRequest, HttpErrorResponse } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
-import { MessageService } from '../../shared/ui/message/service/message.service';
+import { MessageService } from '../ui/message/service/message.service';
 
 export const errorInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn) => {
   const messageService: MessageService = inject(MessageService);

@@ -4,7 +4,7 @@
       <div class="header__container">
         <div class="header__logo">
           <img src="/images/logo-rumtibet.svg" [alt]="'header.logoAlt' | translate">
-          <span class="company-name">{{ 'header.companyName' | translate }}</span>
+          <span class="company-name">{{ APP_CONFIG.companyName | translate }}</span>
         </div>
         <nav class="header__nav">
           @for (page of pages; track page.key) {

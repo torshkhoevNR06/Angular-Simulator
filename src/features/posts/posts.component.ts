@@ -14,10 +14,10 @@ import { MenuItem } from 'primeng/api';
 import { AsyncPipe } from '@angular/common';
 import { catchError, finalize, Observable, tap, throwError } from 'rxjs';
 import { RouterLink } from '@angular/router';
-import { LoaderService } from '../../shared/ui/loader/service/loader.service';
+import { LoaderService } from '../../core/ui/loader/service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MessageService } from '../../shared/ui/message/service/message.service';
+import { MessageService } from '../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-posts',

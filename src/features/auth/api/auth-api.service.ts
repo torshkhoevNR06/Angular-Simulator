@@ -5,7 +5,7 @@ import { ILogin } from '../interface/ILogin';
 import { IToken } from '../interface/IToken';
 import { IAuthUser } from '../interface/IAuthUser';
 import { IAppConfig } from '../../../shared/interface/IAppConfig';
-import { APP_CONFIG } from '../../../shared/token/app-config.token';
+import { APP_CONFIG } from '../../../core/token/app-config.token';
 
 @Injectable({
   providedIn: 'root'

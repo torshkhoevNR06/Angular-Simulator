@@ -8,13 +8,13 @@ import Nora from '@primeuix/themes/nora';
 import Aura from '@primeuix/themes/aura';
 import Lara from '@primeuix/themes/lara';
 import { IAppConfig } from '../interface/IAppConfig';
-import { APP_CONFIG } from '../token/app-config.token';
+import { APP_CONFIG } from '../../core/token/app-config.token';
+
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
 
-  private localStorageService: LocalStorageService =
-    inject(LocalStorageService);
+  private localStorageService: LocalStorageService = inject(LocalStorageService);
 
   APP_CONFIG: IAppConfig = inject(APP_CONFIG);
 

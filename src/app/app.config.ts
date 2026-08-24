@@ -14,10 +14,10 @@ import { IAppConfig } from '../shared/interface/IAppConfig';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
-import { APP_CONFIG } from '../shared/token/app-config.token';
 import { errorInterceptor } from '../core/interceptor/error.interceptor';
 import { loggingInterceptor } from '../core/interceptor/logging.interceptor';
 import { authInterceptor } from '../core/interceptor/auth.interceptor';
+import { APP_CONFIG } from '../core/token/app-config.token';
 
 const getSavedTheme = (appConfigValue: IAppConfig): PresetVariants => {
   let savedTheme: Theme = (localStorage.getItem('theme') as Theme) ?? Theme.AURA;

@@ -5,11 +5,11 @@ import { faTelegram, faVk, faPinterest, faSkype } from '@fortawesome/free-brands
 import { ISocialNetwork } from './interface/ISocialNetwork';
 import { ITravel } from './interface/ITravel';
 import { IFavor } from './interface/IFavor';
-import { APP_CONFIG } from '../../token/app-config.token';
-import { IAppConfig } from '../../interface/IAppConfig';
+import { IAppConfig } from '../../../shared/interface/IAppConfig';
 import { TranslatePipe } from '@ngx-translate/core';
 import { MessageService } from '../message/service/message.service';
-import { LanguageService } from '../language/service/language.service';
+import { LanguageService } from '../../../shared/ui/language/service/language.service';
+import { APP_CONFIG } from '../../token/app-config.token';
 
 @Component({
   selector: 'app-footer',

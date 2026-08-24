@@ -2,7 +2,7 @@ import { HttpInterceptorFn, HttpHandlerFn, HttpRequest, HttpEventType, HttpEvent
 import { inject } from '@angular/core';
 import { tap } from 'rxjs';
 import { IAppConfig } from '../../shared/interface/IAppConfig';
-import { APP_CONFIG } from '../../shared/token/app-config.token';
+import { APP_CONFIG } from '../token/app-config.token';
 
 export const loggingInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>,next: HttpHandlerFn) => {
   const startTime: number = performance.now();

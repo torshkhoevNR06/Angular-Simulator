@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router } from '@angular/router';
 import { AuthService } from './service/auth.service';
 import { catchError, finalize, tap, throwError } from 'rxjs';
-import { LoaderService } from '../../shared/ui/loader/service/loader.service';
+import { LoaderService } from '../../core/ui/loader/service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Language } from '../../shared/ui/language/language.component';
-import { MessageService } from '../../shared/ui/message/service/message.service';
+import { MessageService } from '../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-auth',

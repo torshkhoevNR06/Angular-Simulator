@@ -9,7 +9,7 @@ import { ILocation } from './interface/ILocation';
 import { IParticipant } from './interface/IParticipant';
 import { DATE_PIPE_DEFAULT_OPTIONS, DatePipe, DatePipeConfig } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MessageService } from '../../shared/ui/message/service/message.service';
+import { MessageService } from '../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-home-page',

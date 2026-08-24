@@ -4,7 +4,7 @@ import { AnimatedBorderDirective } from '../../../../shared/directive/animated-b
 import { FontWeightDirective } from '../../../../shared/directive/font-weight.directive';
 import { IUser } from '../../interface/IUser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MessageService } from '../../../../shared/ui/message/service/message.service';
+import { MessageService } from '../../../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-create-user',

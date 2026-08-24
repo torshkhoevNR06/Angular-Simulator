@@ -7,8 +7,8 @@ import { UsersFilterComponent } from './components/users-filter/users-filter.com
 import { BehaviorSubject, combineLatest, map, Observable, tap } from 'rxjs';
 import { IUser } from './interface/IUser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MessageService } from '../../shared/ui/message/service/message.service';
-import { PluralPipe } from '../../core/pipe/plural.pipe';
+import { MessageService } from '../../core/ui/message/service/message.service';
+import { PluralPipe } from '../../shared/pipe/plural.pipe';
 
 @Component({
   selector: 'app-users-page',

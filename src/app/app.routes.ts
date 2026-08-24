@@ -3,7 +3,6 @@ import { postResolver } from '../features/posts/resolver/post.resolver';
 import { adminGuard } from '../core/guard/admin.guard';
 import { authGuard } from '../core/guard/auth.guard';
 
-
 export const routes: Routes = [
   {
     path: 'login',
@@ -11,7 +10,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    loadComponent: () => import('../shared/ui/main-layout/main-layout.component').then((c) => c.MainLayoutComponent),
+    loadComponent: () => import('../core/ui/main-layout/main-layout.component').then((c) => c.MainLayoutComponent),
     children: [
       {
         path: '',
@@ -45,7 +44,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        loadComponent: () => import('../shared/ui/not-found-page/not-found-page.component').then((c) => c.NotFoundPageComponent)
+        loadComponent: () => import('../core/page/not-found-page/not-found-page.component').then((c) => c.NotFoundPageComponent)
       }
     ],
     canActivate: [authGuard]

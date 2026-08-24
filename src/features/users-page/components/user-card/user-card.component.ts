@@ -5,7 +5,7 @@ import { FontWeightDirective } from '../../../../shared/directive/font-weight.di
 import { AnimatedBorderDirective } from '../../../../shared/directive/animated-border.directive';
 import { IUser } from '../../interface/IUser';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PhoneNumberFormatting } from '../../../../core/pipe/phone-number-formatting.pipe';
+import { PhoneNumberFormatting } from '../../../../shared/pipe/phone-number-formatting.pipe';
 
 @Component({
   selector: 'app-user-card',
