@@ -1,0 +1,108 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="share-impressions__newsletter-form">
+      <div class="newsletter-form__info">
+        <span class="entry newsletter-form__entry">{{ 'footer.relevant' | translate }}</span>
+        <h3 class="title newsletter-form__title">{{ 'footer.mailings' | translate }}</h3>
+      </div>
+      <div class="newsletter-form__news-subscription">
+        <span class="news-subscription__text">{{ 'footer.email' | translate }}</span>
+        <div class="news-subscription__form">
+          <input 
+            class="news-subscription__email" 
+            id="news-subscription__email" 
+            type="text"
+            [placeholder]="'footer.emailPlaceholder' | translate"
+          >
+          <button 
+            class="btn news-subscription__btn" 
+            id="news-subscription__btn"
+            (click)="onNewsSubscription()"
+          >
+            {{ 'footer.btnNewsSubs' | translate }}
+          </button>
+        </div>
+        <div class="news-subscription__legal-disklayer">
+          <p class="legal-disklayer__text">{{ 'footer.disklayerText' | translate }} <a href="#" class="legal-disklayer__link" id="legal-disklayer__link-one">{{ 'footer.disklayerLinkOne' | translate }} </a><a href="#" class="legal-disklayer__link-two" id="legal-disklayer__link-two">{{ 'footer.disklayerLinkTwo' | translate }}</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__company">
+      <h3 class="footer__heading">{{ APP_CONFIG.companyName | translate }}</h3>
+      <p class="footer__desc">{{ 'footer.desc' | translate }}</p>
+      <div class="footer__contacts">
+        <a 
+          href="mailto:info@domain.com" 
+          class="footer__contact-link" 
+          id="footer__contact-link__email"
+        >
+          {{ 'footer.contactEmail' | translate }}
+        </a>
+        <a 
+          href="tel:+71234567890" 
+          class="footer__contact-link" 
+          id="footer__contact-link__number"
+        >
+          {{ 'footer.contactPhone' | translate }}
+        </a>
+      </div>
+      <div class="footer__socials">
+        @for (socialNetwork of socialNetworks; track socialNetwork.id) {
+          <a href="#" class="footer__social-link" id="footer__social-link">
+            <fa-icon [icon]="socialNetwork.image" />
+          </a>
+        } @empty {
+          <span>{{ 'footer.stubArticle' | translate }}</span>
+        }
+      </div>
+    </div>
+    <div class="footer__services">
+      <h3 class="footer__heading">{{ 'footer.ourServices' | translate }}</h3>
+      <ul class="footer__list">
+        @for(favor of favors; track favor.id) {
+          <li class="footer__list-item">
+            <fa-icon [icon]="faAngleRight" />
+            <a 
+              href="#" 
+              class="footer__list-link" 
+              id="footer__list-link__favor"
+            >
+              {{ favor.key | translate }}
+            </a>
+          </li>
+        } @empty {
+          <span>{{ 'footer.servicePlug' | translate }}</span>
+        }
+      </ul>
+    </div>
+    <div class="footer__important">
+      <h3 class="footer__heading">{{ 'footer.importantForTravel' | translate }}</h3>
+      <ul class="footer__list">
+        @for (travel of travels; track travel.id) {
+          <li class="footer__list-item">
+            <fa-icon [icon]="faAngleRight" />
+            <a 
+              href="#" 
+              class="footer__list-link" 
+              id="footer__list-link__travel"
+            >
+              {{ travel.key | translate }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <div class="footer__copyright-container">
+      <span class="footer__copyright-text">{{ 'footer.copyrightText' | translate }}</span>
+      <a 
+        href="#" 
+        class="footer__copyright-link" 
+        id="footer__copyright-link"
+      >
+        {{ 'footer.copyrightLink' | translate }}
+      </a>
+    </div>
+  </div>
+</footer>

@@ -7,7 +7,6 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { PostService } from './service/post.service';
-import { MessageService } from '../../service/message.service';
 import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { IPost } from './interface/IPost';
 import { PostEditDialogComponent } from './components/post-edit-dialog/post-edit-dialog.component';
@@ -15,9 +14,10 @@ import { MenuItem } from 'primeng/api';
 import { AsyncPipe } from '@angular/common';
 import { catchError, finalize, Observable, tap, throwError } from 'rxjs';
 import { RouterLink } from '@angular/router';
-import { LoaderService } from '../../service/loader.service';
+import { LoaderService } from '../../core/ui/loader/service/loader.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { MessageService } from '../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-posts',
@@ -86,7 +86,8 @@ export class PostsComponent implements OnInit, DoCheck {
   onPageChange(event: TablePageEvent): void {
     this.isLoading = true;
 
-    this.postService.initPosts(event.rows, event.first)
+    this.postService
+      .initPosts(event.rows, event.first)
       .pipe(
         tap(() => {
           this.messageService.showInfo(this.translate.instant('postsPage.messages.pageChanged'));
@@ -99,7 +100,8 @@ export class PostsComponent implements OnInit, DoCheck {
           return throwError(() => error);
         }),
         finalize(() => (this.isLoading = false))
-      ).subscribe();
+      )
+      .subscribe();
   }
 
   showPostEditingModal(currentPost: IPost): void {

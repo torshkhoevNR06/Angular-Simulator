@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { MessageService } from '../../../../service/message.service';
 import { catchError, tap, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { PostService } from '../../service/post.service';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { MessageService } from '../../../../core/ui/message/service/message.service';
 
 @Component({
   selector: 'app-post-create',
@@ -53,8 +53,7 @@ export class PostCreateComponent {
             this.messageService.showError(this.translate.instant('postsPage.messages.createError', { error }));
             return throwError(() => error);
           })
-        )
-        .subscribe();
+        ).subscribe();
     } else {
       this.messageService.showError(this.translate.instant('postsPage.messages.invalid'));
     }

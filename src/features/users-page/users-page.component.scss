@@ -1,0 +1,52 @@
+@use '../../assets/mixins' as mix;
+
+.wrapper {
+  margin: 80px 0 140px 0;
+  min-height: 240px;
+
+  .container {
+    @include mix.flex(center, start, nowrap);
+
+    max-width: 1460px;
+    margin: 0 auto;
+
+    .inner {
+      @include mix.flex(start, center, nowrap);
+
+      flex-direction: column;
+      row-gap: 80px;
+
+      .heading {
+        width: 100%;
+
+        &__item {
+          font-weight: 800;
+          font-size: 48px;
+          text-align: center;
+          line-height: 30px;
+          color: var(--secondary-text-color);
+        }
+      }
+
+      .user {
+        @include mix.flex(center, start, wrap);
+
+        width: 1510px;
+        gap: 50px 70px;
+      }
+
+      .error {
+        border-radius: 20px;
+        background-color: #B15757;
+
+        &__title {
+          padding: 30px;
+          font-size: 26px;
+          font-weight: 800;
+          line-height: 30px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
